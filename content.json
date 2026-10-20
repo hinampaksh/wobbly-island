@@ -1,0 +1,349 @@
+{
+  "_manifest": {
+    "_description": "AI SECTION DIRECTORY — Read this block first to locate any section. Each entry maps a plain-English section name to its top-level key in this file. Use dot-notation paths to target specific fields (e.g. hero.headline). Do NOT alter keys in _manifest itself.",
+    "sections": {
+      "theme": {
+        "key": "_theme",
+        "fields": [
+          "colors",
+          "typography",
+          "layout"
+        ],
+        "html_id": "document-root"
+      },
+      "nav": {
+        "key": "brand",
+        "fields": [
+          "name",
+          "tagline",
+          "cta_button"
+        ],
+        "html_id": "site-header"
+      },
+      "hero": {
+        "key": "hero",
+        "fields": [
+          "badge",
+          "headline",
+          "subheadline",
+          "primary_cta",
+          "secondary_cta"
+        ],
+        "html_id": "hero-section"
+      },
+      "stats": {
+        "key": "stats",
+        "fields": [
+          "value",
+          "label"
+        ],
+        "html_id": "stats-grid"
+      },
+      "services": {
+        "key": "services",
+        "fields": [
+          "title",
+          "description",
+          "starting_price",
+          "turnaround"
+        ],
+        "html_id": "services-grid"
+      },
+      "why us": {
+        "key": "why_us",
+        "fields": [
+          "title",
+          "description"
+        ],
+        "html_id": "why-grid"
+      },
+      "testimonials": {
+        "key": "testimonials",
+        "fields": [
+          "quote",
+          "author",
+          "location",
+          "rating"
+        ],
+        "html_id": "testimonials-slider"
+      },
+      "faq": {
+        "key": "faq",
+        "fields": [
+          "question",
+          "answer"
+        ],
+        "html_id": "faq-list"
+      },
+      "quote_form": {
+        "key": "quote_form",
+        "fields": [
+          "badge",
+          "headline",
+          "subheadline",
+          "button_text"
+        ],
+        "html_id": "quote-form-section"
+      },
+      "subscribe": {
+        "key": "subscribe",
+        "fields": [
+          "headline",
+          "subheadline",
+          "button_text",
+          "placeholder"
+        ],
+        "html_id": "subscribe-section"
+      },
+      "contact": {
+        "key": "contact",
+        "fields": [
+          "phone",
+          "email",
+          "address"
+        ],
+        "html_id": "contact-section"
+      },
+      "hours": {
+        "key": "contact.hours",
+        "fields": [
+          "weekdays",
+          "saturday",
+          "sunday"
+        ],
+        "html_id": "hours-list"
+      },
+      "footer": {
+        "key": "footer",
+        "fields": [
+          "copyright",
+          "notice"
+        ],
+        "html_id": "site-footer"
+      }
+    }
+  },
+  "_theme": {
+    "engine": "bs-universal-v2",
+    "motion": true,
+    "colors": {
+      "primary": "#fbd784",
+      "primary_hover": "#f7ca62",
+      "primary_light": "rgba(251, 215, 132, 0.15)",
+      "accent_1": "#fbd784",
+      "accent_2": "#8E9988",
+      "accent_3": "#B38F7D",
+      "text_main": "#ffffff",
+      "text_muted": "#8f9ea9",
+      "bg_page": "#0b1d26",
+      "bg_surface": "#122530",
+      "border_color": "#1f333e"
+    },
+    "typography": {
+      "preset": "editorial-heritage",
+      "display": "Plus Jakarta Sans",
+      "body": "Plus Jakarta Sans",
+      "accent": "serif",
+      "google_fonts_url": null
+    },
+    "layout": {
+      "radius_sm": "4px",
+      "radius_md": "10px",
+      "radius_lg": "20px",
+      "max_width": "1200px"
+    }
+  },
+  "brand": {
+    "name": "Wobbly Island",
+    "tagline": "Fast, certified device repairs in Cebu",
+    "cta_button": "Book a Repair"
+  },
+  "hero": {
+    "badge": "⚡ 100% Certified OEM Repairs in Cebu",
+    "headline": "Expert Repairs. Guaranteed Results.",
+    "subheadline": "We fix iPhones, Androids, MacBooks, and Laptops with certified parts and a comprehensive 90-day warranty.",
+    "primary_cta": "Get Free Estimate",
+    "secondary_cta": "View Services"
+  },
+  "stats": [
+    {
+      "value": "15,000+",
+      "label": "Devices Repaired"
+    },
+    {
+      "value": "45 Mins",
+      "label": "Average Turnaround"
+    },
+    {
+      "value": "90 Days",
+      "label": "Warranty Guaranteed"
+    },
+    {
+      "value": "4.9 ★",
+      "label": "Customer Rating"
+    }
+  ],
+  "services": [
+    {
+      "id": "phone-repair",
+      "icon": "phone",
+      "title": "iPhone & Android Repair",
+      "description": "Screen replacement, OEM battery upgrade, camera sensor fixes, and water damage recovery.",
+      "starting_price": "₱1,200",
+      "turnaround": "30-45 mins",
+      "image": {
+        "src": "assets/mobile-thumb.webp",
+        "alt": "Smartphone diagnostic desk",
+        "width": 1000,
+        "height": 666
+      }
+    },
+    {
+      "id": "laptop-repair",
+      "icon": "laptop",
+      "title": "Laptop & MacBook Repair",
+      "description": "Keyboard replacement, SSD upgrades, logic board diagnostics, and thermal servicing.",
+      "starting_price": "₱2,500",
+      "turnaround": "1-2 hours",
+      "image": {
+        "src": "assets/diagnostics-thumb.webp",
+        "alt": "MacBook keyboard and logic diagnostics",
+        "width": 1000,
+        "height": 666
+      }
+    },
+    {
+      "id": "tablet-repair",
+      "icon": "tablet",
+      "title": "iPad & Tablet Repair",
+      "description": "Glass digitizer replacement, LCD repairs, charging port soldering, and battery health service.",
+      "starting_price": "₱1,800",
+      "turnaround": "45-60 mins"
+    },
+    {
+      "id": "data-recovery",
+      "icon": "database",
+      "title": "Data Recovery & Diagnostics",
+      "description": "Emergency data extraction from unbootable devices and corrupted drives with complete privacy.",
+      "starting_price": "₱1,500",
+      "turnaround": "Same-day"
+    }
+  ],
+  "why_us": [
+    {
+      "icon": "shield",
+      "title": "Certified OEM Parts",
+      "description": "We source high-grade components to make sure your device performs just like brand new."
+    },
+    {
+      "icon": "clock",
+      "title": "Under-an-Hour Fixes",
+      "description": "Most screen and battery replacements are completed while you wait in our lounge."
+    },
+    {
+      "icon": "badge-check",
+      "title": "Upfront Honest Pricing",
+      "description": "Zero hidden diagnostic charges. You approve the quote before we touch a screw."
+    }
+  ],
+  "testimonials": [
+    {
+      "quote": "Dropped my phone right before a business trip. Cebu Tech Masters had the screen replaced in 35 minutes flat!",
+      "author": "Mark S.",
+      "location": "Makati City",
+      "rating": "★★★★★"
+    },
+    {
+      "quote": "Replaced my MacBook battery while I had lunch nearby. Honest price and courteous service.",
+      "author": "Patricia L.",
+      "location": "BGC, Taguig",
+      "rating": "★★★★★"
+    },
+    {
+      "quote": "Repaired an iPad water damaged during monsoon season. Completely restored all data and display!",
+      "author": "Jerome V.",
+      "location": "Cebu IT Park",
+      "rating": "★★★★★"
+    }
+  ],
+  "faq": [
+    {
+      "question": "How long does a typical screen or battery repair take?",
+      "answer": "Most phone screen and battery replacements take between 30 to 45 minutes. Laptops and complex logic board servicing generally take 1 to 2 hours."
+    },
+    {
+      "question": "Do you provide a warranty on repairs?",
+      "answer": "Yes! Every hardware repair comes with our comprehensive 90-day parts and labor warranty."
+    },
+    {
+      "question": "Will my personal data remain safe during servicing?",
+      "answer": "Absolutely. We adhere to strict customer data privacy protocols and do not require your device passcode unless diagnostics specifically demand testing."
+    },
+    {
+      "question": "Can I get a quote before committing to the repair?",
+      "answer": "Yes. Our initial diagnostic quote is completely transparent and free. We only proceed once you approve the estimate."
+    }
+  ],
+  "quote_form": {
+    "badge": "Instant Estimate",
+    "headline": "Request a Free Repair Quote",
+    "subheadline": "Tell us about your device issue and our certified technicians will provide an upfront price in minutes.",
+    "button_text": "Submit Quote Request"
+  },
+  "subscribe": {
+    "headline": "Get ₱200 Off Your First Repair",
+    "subheadline": "Subscribe for exclusive device care guides, maintenance tips, and VIP promotional discounts.",
+    "button_text": "Claim Discount",
+    "placeholder": "Enter your email address"
+  },
+  "contact": {
+    "phone": "+63 2 9999 8888",
+    "email": "repairs@cebutechmasters.ph",
+    "address": "452 Taft Avenue, Ermita, Cebu",
+    "hours": {
+      "weekdays": "Monday - Friday: 9:00 AM - 7:00 PM",
+      "saturday": "Saturday: 8:00 AM - 6:00 PM",
+      "sunday": "Sunday: Closed"
+    },
+    "geo": {
+      "latitude": 10.3157,
+      "longitude": 123.8854
+    },
+    "price_range": "₱₱",
+    "currencies_accepted": "PHP",
+    "payment_accepted": "Cash, GCash, Maya, Credit Card"
+  },
+  "footer": {
+    "copyright": "© 2026 Cebu Tech Masters. All rights reserved.",
+    "notice": "Certified hardware diagnostics and quick-turnaround repair center."
+  },
+  "media": {
+    "hero": {
+      "src": "assets/hero-device.webp",
+      "alt": "macbook 562499 1920",
+      "width": 1200,
+      "height": 658
+    },
+    "workspace": {
+      "src": "assets/workspace-thumb.webp",
+      "alt": "flatlay home gadgets pixabay 5115827",
+      "width": 1000,
+      "height": 666
+    },
+    "diagnostics": {
+      "src": "assets/diagnostics-thumb.webp",
+      "alt": "technology laptop keyboard pixabay 791029",
+      "width": 1000,
+      "height": 666
+    },
+    "mobile": {
+      "src": "assets/mobile-thumb.webp",
+      "alt": "apple smartphone desk pixabay 1282241",
+      "width": 1000,
+      "height": 666
+    }
+  },
+  "_site": {
+    "preview_token": "prev_tt0p2l7s"
+  }
+}

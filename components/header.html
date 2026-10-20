@@ -1,0 +1,49 @@
+  <!-- Site Navigation -->
+  <header class="site-header" id="site-header" data-section="nav" data-content-key="brand">
+    <div class="container nav-container">
+      <a href="#" class="brand-logo hover-spin">
+        <svg class="icon icon-sm" viewBox="0 0 24 24"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon></svg>
+        <span class="brand-name">Cebu Tech Masters</span>
+      </a>
+      <ul class="nav-links desktop-only">
+        <li><a href="#services" class="nav-anim-center <!-- @active:services -->">Services</a></li>
+        <li><a href="#why-us" class="nav-anim-slide <!-- @active:why-us -->">Why Us</a></li>
+        <li><a href="#quote" class="nav-anim-pill <!-- @active:quote -->">Get Estimate</a></li>
+        <li><a href="#faq" class="nav-anim-lift <!-- @active:faq -->">FAQ</a></li>
+        <li><a href="#contact" class="nav-anim-dot <!-- @active:contact -->">Contact</a></li>
+      </ul>
+      <div class="nav-actions">
+        <a href="#quote-modal" class="btn btn-primary desktop-only" id="nav-cta" data-open-modal="quote-modal">Book a Repair</a>
+        <!-- Popover Mobile Toggle Button (Zero JS) -->
+        <button class="menu-toggle mobile-only" popovertarget="site-mobile-menu" aria-label="Open Navigation Menu">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+            <line x1="3" y1="6" x2="21" y2="6"></line>
+            <line x1="3" y1="12" x2="21" y2="12"></line>
+            <line x1="3" y1="18" x2="21" y2="18"></line>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Universal Popover Mobile Navigation (Native Top Layer, Light Dismiss, Zero JS) -->
+  <nav id="site-mobile-menu" popover class="el-mobile-menu" aria-label="Mobile Navigation Menu">
+    <div class="el-menu-header">
+      <span class="brand-name" style="font-weight: 700;">MENU</span>
+      <button class="el-menu-close" popovertarget="site-mobile-menu" popovertargetaction="hide" aria-label="Close Navigation">
+        ✕
+      </button>
+    </div>
+    <ul class="el-menu-links">
+      <li><a href="#services" popovertarget="site-mobile-menu" popovertargetaction="hide">Services</a></li>
+      <li><a href="#why-us" popovertarget="site-mobile-menu" popovertargetaction="hide">Why Us</a></li>
+      <li><a href="#quote" popovertarget="site-mobile-menu" popovertargetaction="hide">Get Estimate</a></li>
+      <li><a href="#faq" popovertarget="site-mobile-menu" popovertargetaction="hide">FAQ</a></li>
+      <li><a href="#contact" popovertarget="site-mobile-menu" popovertargetaction="hide">Contact</a></li>
+    </ul>
+    <div class="el-menu-footer">
+      <a href="#quote-modal" class="btn btn-primary" popovertarget="site-mobile-menu" popovertargetaction="hide" style="width: 100%; justify-content: center;">
+        Book a Repair
+      </a>
+    </div>
+  </nav>

@@ -1,0 +1,571 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Direct Self-Hosted Latin Variable Font Preload (First-Byte Priority in <head>) -->
+  <link rel="preload" href="assets/fonts/plus-jakarta-sans.woff2" as="font" type="font/woff2" crossorigin>
+  <title>Cebu Tech Masters | Fast Device Repairs</title>
+  <meta name="description" content="Fast, certified device repairs in Cebu for iPhones, Androids, MacBooks, and Laptops. Same-day service with guaranteed 90-day warranty.">
+  <link rel="canonical" href="https://bot-va-test.pages.dev/">
+
+  <!-- OpenGraph & Social Media Meta Cards -->
+  <meta property="og:type" content="business.business">
+  <meta property="og:title" content="Cebu Tech Masters | Fast Device Repairs">
+  <meta property="og:description" content="Fast, certified device repairs in Cebu for iPhones, Androids, MacBooks, and Laptops. 90-day warranty.">
+  <meta property="og:url" content="https://bot-va-test.pages.dev/">
+  <meta property="og:image" content="https://agency-content-router.alfiezafra.workers.dev/cebu-tech-masters/assets/hero-device.webp">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <!-- Automated Google LocalBusiness Structured Data (JSON-LD) -->
+  <script type="application/ld+json" id="schema-local-business">
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "Cebu Tech Masters",
+    "image": "https://agency-content-router.alfiezafra.workers.dev/cebu-tech-masters/assets/hero-device.webp",
+    "telephone": "+63 2 9999 8888",
+    "email": "repairs@cebutechmasters.ph",
+    "priceRange": "₱₱",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "452 Taft Avenue, Ermita",
+      "addressLocality": "Cebu City",
+      "addressRegion": "Cebu",
+      "postalCode": "6000",
+      "addressCountry": "PH"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": 10.3157,
+      "longitude": 123.8854
+    },
+    "openingHoursSpecification": [
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+        "opens": "09:00",
+        "closes": "19:00"
+      },
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": "Saturday",
+        "opens": "08:00",
+        "closes": "18:00"
+      }
+    ],
+    "currenciesAccepted": "PHP",
+    "paymentAccepted": "Cash, GCash, Maya, Credit Card"
+  }
+  </script>
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- @component:header -->
+<!-- Site Navigation -->
+  <header class="site-header" id="site-header" data-section="nav" data-content-key="brand">
+    <div class="container nav-container">
+      <a href="#" class="brand-logo hover-spin">
+        <svg class="icon icon-sm" viewBox="0 0 24 24"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon></svg>
+        <span class="brand-name">Cebu Tech Masters</span>
+      </a>
+      <ul class="nav-links desktop-only">
+        <li><a href="#services" class="nav-anim-center ">Services</a></li>
+        <li><a href="#why-us" class="nav-anim-slide ">Why Us</a></li>
+        <li><a href="#quote" class="nav-anim-pill ">Get Estimate</a></li>
+        <li><a href="#faq" class="nav-anim-lift ">FAQ</a></li>
+        <li><a href="#contact" class="nav-anim-dot ">Contact</a></li>
+      </ul>
+      <div class="nav-actions">
+        <a href="#quote-modal" class="btn btn-primary desktop-only" id="nav-cta" data-open-modal="quote-modal">Book a Repair</a>
+        <!-- Popover Mobile Toggle Button (Zero JS) -->
+        <button class="menu-toggle mobile-only" popovertarget="site-mobile-menu" aria-label="Open Navigation Menu">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+            <line x1="3" y1="6" x2="21" y2="6"></line>
+            <line x1="3" y1="12" x2="21" y2="12"></line>
+            <line x1="3" y1="18" x2="21" y2="18"></line>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Universal Popover Mobile Navigation (Native Top Layer, Light Dismiss, Zero JS) -->
+  <nav id="site-mobile-menu" popover class="el-mobile-menu" aria-label="Mobile Navigation Menu">
+    <div class="el-menu-header">
+      <span class="brand-name" style="font-weight: 700;">MENU</span>
+      <button class="el-menu-close" popovertarget="site-mobile-menu" popovertargetaction="hide" aria-label="Close Navigation">
+        ✕
+      </button>
+    </div>
+    <ul class="el-menu-links">
+      <li><a href="#services" popovertarget="site-mobile-menu" popovertargetaction="hide">Services</a></li>
+      <li><a href="#why-us" popovertarget="site-mobile-menu" popovertargetaction="hide">Why Us</a></li>
+      <li><a href="#quote" popovertarget="site-mobile-menu" popovertargetaction="hide">Get Estimate</a></li>
+      <li><a href="#faq" popovertarget="site-mobile-menu" popovertargetaction="hide">FAQ</a></li>
+      <li><a href="#contact" popovertarget="site-mobile-menu" popovertargetaction="hide">Contact</a></li>
+    </ul>
+    <div class="el-menu-footer">
+      <a href="#quote-modal" class="btn btn-primary" popovertarget="site-mobile-menu" popovertargetaction="hide" style="width: 100%; justify-content: center;">
+        Book a Repair
+      </a>
+    </div>
+  </nav>
+<!-- /@component:header -->
+
+  <main>
+    <!-- Hero Section -->
+    <section class="hero-section" id="hero-section" data-section="hero" data-content-key="hero">
+      <div class="container">
+        <span class="badge hover-bounce" id="hero-badge" style="cursor: default;">
+          <svg class="icon icon-sm" viewBox="0 0 24 24"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon></svg>
+          <span>Same-Day Repairs in Under 1 Hour</span>
+        </span>
+        <h1 class="hero-headline" id="hero-headline">Fast, Reliable Device Repairs</h1>
+        <p class="hero-subheadline" id="hero-subheadline">We fix iPhones, Androids, MacBooks, and Laptops with certified parts and a comprehensive 90-day warranty.</p>
+        <div class="hero-ctas">
+          <a href="#quote-modal" class="btn btn-primary" id="hero-primary-cta" data-open-modal="quote-modal">Get Free Estimate</a>
+          <a href="#services" class="btn btn-outline" id="hero-secondary-cta">View Services</a>
+        </div>
+
+        <!-- Hero Showcase Image (Zero-CLS Pre-rendered) -->
+        <div class="hero-image-wrap">
+          <img id="hero-img" src="assets/hero-device.webp" alt="MacBook and laptop diagnostics workstation" width="1200" height="658" loading="eager" fetchpriority="high">
+        </div>
+
+        <!-- Key Stats (Pre-hydrated static elements to prevent CLS) -->
+        <div class="stats-grid" id="stats-grid" data-section="stats" data-content-key="stats">
+          <div class="stat-card hover-lift">
+            <div class="stat-value">15,000+</div>
+            <div class="stat-label">Devices Repaired</div>
+          </div>
+          <div class="stat-card hover-lift">
+            <div class="stat-value">45 Mins</div>
+            <div class="stat-label">Average Turnaround</div>
+          </div>
+          <div class="stat-card hover-lift">
+            <div class="stat-value">90 Days</div>
+            <div class="stat-label">Warranty Guaranteed</div>
+          </div>
+          <div class="stat-card hover-lift">
+            <div class="stat-value">4.9 ★</div>
+            <div class="stat-label">Customer Rating</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="section" id="services" data-section="services" data-content-key="services">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title">Our Repair Services</h2>
+          <p class="section-subtitle">Expert hardware diagnostics and component replacements backed by guaranteed warranty.</p>
+        </div>
+        <div class="services-grid" id="services-grid">
+          <div class="service-card hover-lift" id="phone-repair">
+            <img class="service-card-img" src="assets/mobile-thumb.webp" alt="Smartphone diagnostic desk" width="1000" height="666" loading="lazy">
+            <div class="service-icon">
+              <svg class="icon icon-lg" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+            </div>
+            <h3 class="service-title">iPhone & Android Repair</h3>
+            <p class="service-description">Screen replacement, OEM battery upgrade, camera sensor fixes, and water damage recovery.</p>
+            <div class="service-meta">
+              <span class="service-price">₱1,200</span>
+              <span class="service-turnaround">30-45 mins</span>
+            </div>
+          </div>
+          <div class="service-card hover-lift" id="laptop-repair">
+            <img class="service-card-img" src="assets/diagnostics-thumb.webp" alt="MacBook keyboard and logic diagnostics" width="1000" height="666" loading="lazy">
+            <div class="service-icon">
+              <svg class="icon icon-lg" viewBox="0 0 24 24"><path d="M20 16V7a2 2 0 0 0-2-2H6a2 2 0 0 0-2 2v9m16 0H4m16 0 1.28 2.55A1 1 0 0 1 20.28 20H3.72a1 1 0 0 1-.89-1.45L4 16"></path></svg>
+            </div>
+            <h3 class="service-title">Laptop & MacBook Repair</h3>
+            <p class="service-description">Keyboard replacement, SSD upgrades, logic board diagnostics, and thermal servicing.</p>
+            <div class="service-meta">
+              <span class="service-price">₱2,500</span>
+              <span class="service-turnaround">1-2 hours</span>
+            </div>
+          </div>
+          <div class="service-card hover-lift" id="tablet-repair">
+            <div class="service-icon">
+              <svg class="icon icon-lg" viewBox="0 0 24 24"><rect width="16" height="20" x="4" y="2" rx="2" ry="2"></rect><line x1="12" x2="12.01" y1="18" y2="18"></line></svg>
+            </div>
+            <h3 class="service-title">iPad & Tablet Repair</h3>
+            <p class="service-description">Glass digitizer replacement, LCD repairs, charging port soldering, and battery health service.</p>
+            <div class="service-meta">
+              <span class="service-price">₱1,800</span>
+              <span class="service-turnaround">45-60 mins</span>
+            </div>
+          </div>
+          <div class="service-card hover-lift" id="data-recovery">
+            <div class="service-icon">
+              <svg class="icon icon-lg" viewBox="0 0 24 24"><ellipse cx="12" cy="5" rx="9" ry="3"></ellipse><path d="M3 5V19A9 3 0 0 0 21 19V5"></path><path d="M3 12A9 3 0 0 0 21 12"></path></svg>
+            </div>
+            <h3 class="service-title">Data Recovery & Diagnostics</h3>
+            <p class="service-description">Emergency data extraction from unbootable devices and corrupted drives with complete privacy.</p>
+            <div class="service-meta">
+              <span class="service-price">₱1,500</span>
+              <span class="service-turnaround">Same-day</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Instant Quote Lead Form Section -->
+    <section class="section" id="quote" data-section="quote_form" data-content-key="quote_form" style="background-color: #f3f4f6;">
+      <div class="container">
+        <div class="form-grid">
+          <div>
+            <span class="badge" id="quote-badge">Instant Estimate</span>
+            <h2 class="section-title" id="quote-headline" style="text-align: left; margin-top: 10px;">Request a Free Repair Quote</h2>
+            <p class="section-subtitle" id="quote-subheadline" style="text-align: left; margin-left: 0; margin-bottom: 24px;">Tell us about your device issue and our certified technicians will provide an upfront price in minutes.</p>
+            <ul style="list-style: none; display: flex; flex-direction: column; gap: 14px; color: var(--text-muted); font-size: 0.95rem;">
+              <li style="display: flex; align-items: center; gap: 10px;">
+                <svg class="icon icon-sm" style="color: var(--primary);" viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+                90-Day Parts & Labor Warranty Included
+              </li>
+              <li style="display: flex; align-items: center; gap: 10px;">
+                <svg class="icon icon-sm" style="color: var(--primary);" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+                Most Screen & Battery Replacements Under 45 Mins
+              </li>
+              <li style="display: flex; align-items: center; gap: 10px;">
+                <svg class="icon icon-sm" style="color: var(--primary);" viewBox="0 0 24 24"><path d="m9 12 2 2 4-4"></path><circle cx="12" cy="12" r="10"></circle></svg>
+                100% Free Diagnostics — No Obligation
+              </li>
+            </ul>
+            <div class="quote-image-wrap">
+              <img id="quote-img" src="assets/workspace-thumb.webp" alt="Clean organized electronic repair desk" width="1000" height="666" loading="lazy">
+            </div>
+          </div>
+          <div class="quote-card">
+            <form id="quote-form">
+              <div class="form-row">
+                <div class="form-group">
+                  <label class="form-label" for="device-type">Device Type</label>
+                  <select class="form-control" id="device-type" required>
+                    <option value="">Select device...</option>
+                    <option value="iPhone">Apple iPhone</option>
+                    <option value="Android">Samsung / Android</option>
+                    <option value="MacBook">MacBook / Mac</option>
+                    <option value="Laptop">Windows Laptop</option>
+                    <option value="iPad">iPad / Tablet</option>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="repair-service">Issue / Repair</label>
+                  <select class="form-control" id="repair-service" required>
+                    <option value="">Select issue...</option>
+                    <option value="Screen Replacement">Cracked Screen</option>
+                    <option value="Battery Replacement">Dead / Draining Battery</option>
+                    <option value="Charging Port">Won't Charge</option>
+                    <option value="Water Damage">Water / Liquid Damage</option>
+                    <option value="Data Recovery">Data Recovery</option>
+                    <option value="Other">Other Diagnostic</option>
+                  </select>
+                </div>
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="full-name">Full Name</label>
+                <input type="text" class="form-control" id="full-name" placeholder="Juan Dela Cruz" required>
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="contact-number">Mobile / WhatsApp Number</label>
+                <input type="tel" class="form-control" id="contact-number" placeholder="+63 917 000 0000" required>
+              </div>
+              <button type="submit" class="btn btn-primary btn-block" id="quote-submit-btn">Submit Quote Request</button>
+              <div class="form-feedback" id="quote-feedback"></div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Why Us Section -->
+    <section class="section" id="why-us" data-section="why us" data-content-key="why_us">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title">Why Customers Trust Us</h2>
+          <p class="section-subtitle">Delivering high standards in electronic repair with transparent turnaround.</p>
+        </div>
+        <div class="why-grid" id="why-grid">
+          <div class="why-card hover-lift">
+            <div class="why-icon">
+              <svg class="icon icon-lg" viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+            </div>
+            <h3 class="why-title">Certified OEM Parts</h3>
+            <p class="why-desc">We source high-grade components to make sure your device performs just like brand new.</p>
+          </div>
+          <div class="why-card hover-lift">
+            <div class="why-icon">
+              <svg class="icon icon-lg" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+            </div>
+            <h3 class="why-title">Under-an-Hour Fixes</h3>
+            <p class="why-desc">Most screen and battery replacements are completed while you wait in our lounge.</p>
+          </div>
+          <div class="why-card hover-lift">
+            <div class="why-icon">
+              <svg class="icon icon-lg" viewBox="0 0 24 24"><path d="M3.85 8.62a4 4 0 0 1 4.78-4.77 4 4 0 0 1 6.74 0 4 4 0 0 1 4.78 4.78 4 4 0 0 1 0 6.74 4 4 0 0 1-4.77 4.78 4 4 0 0 1-6.75 0 4 4 0 0 1-4.78-4.77 4 4 0 0 1 0-6.76Z"></path><path d="m9 12 2 2 4-4"></path></svg>
+            </div>
+            <h3 class="why-title">Upfront Honest Pricing</h3>
+            <p class="why-desc">Zero hidden diagnostic charges. You approve the quote before we touch a screw.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Testimonials Slider Section -->
+    <section class="section" id="testimonials" data-section="testimonials" data-content-key="testimonials" style="background-color: #f3f4f6;">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title">What Our Clients Say</h2>
+          <p class="section-subtitle">Real feedback from verified customers whose devices were revived by our certified technicians.</p>
+        </div>
+        <div class="slider-container">
+          <button class="slider-btn slider-btn-prev" id="slider-prev" aria-label="Previous Reviews">
+            <svg class="icon icon-sm" viewBox="0 0 24 24"><polyline points="15 18 9 12 15 6"></polyline></svg>
+          </button>
+          <div class="slider-track" id="testimonials-slider">
+            <div class="slider-item">
+              <div class="testimonial-card">
+                <div class="testimonial-rating">★★★★★</div>
+                <p class="testimonial-quote">"Dropped my phone right before a business trip. Cebu Tech Masters had the screen replaced in 35 minutes flat!"</p>
+                <div class="testimonial-author">Mark S.</div>
+                <div class="testimonial-location">Makati City</div>
+              </div>
+            </div>
+            <div class="slider-item">
+              <div class="testimonial-card">
+                <div class="testimonial-rating">★★★★★</div>
+                <p class="testimonial-quote">"Replaced my MacBook battery while I had lunch nearby. Honest price and courteous service."</p>
+                <div class="testimonial-author">Patricia L.</div>
+                <div class="testimonial-location">BGC, Taguig</div>
+              </div>
+            </div>
+            <div class="slider-item">
+              <div class="testimonial-card">
+                <div class="testimonial-rating">★★★★★</div>
+                <p class="testimonial-quote">"Repaired an iPad water damaged during monsoon season. Completely restored all data and display!"</p>
+                <div class="testimonial-author">Jerome V.</div>
+                <div class="testimonial-location">Cebu IT Park</div>
+              </div>
+            </div>
+          </div>
+          <button class="slider-btn slider-btn-next" id="slider-next" aria-label="Next Reviews">
+            <svg class="icon icon-sm" viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"></polyline></svg>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ Accordion Section -->
+    <section class="section" id="faq" data-section="faq" data-content-key="faq">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title">Frequently Asked Questions</h2>
+          <p class="section-subtitle">Everything you need to know about our turnaround times, parts warranty, and service process.</p>
+        </div>
+        <div class="faq-list" id="faq-list">
+          <details class="faq-item" open>
+            <summary class="faq-question">
+              <span>How long does a typical screen or battery repair take?</span>
+              <svg class="icon icon-sm faq-chevron" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"></polyline></svg>
+            </summary>
+            <div class="faq-answer-wrap">
+              <div class="faq-answer-inner">
+                <div class="faq-answer">
+                  Most phone screen and battery replacements take between 30 to 45 minutes. Laptops and complex logic board servicing generally take 1 to 2 hours.
+                </div>
+              </div>
+            </div>
+          </details>
+          <details class="faq-item">
+            <summary class="faq-question">
+              <span>Do you provide a warranty on repairs?</span>
+              <svg class="icon icon-sm faq-chevron" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"></polyline></svg>
+            </summary>
+            <div class="faq-answer-wrap">
+              <div class="faq-answer-inner">
+                <div class="faq-answer">
+                  Yes! Every hardware repair comes with our comprehensive 90-day parts and labor warranty.
+                </div>
+              </div>
+            </div>
+          </details>
+          <details class="faq-item">
+            <summary class="faq-question">
+              <span>Will my personal data remain safe during servicing?</span>
+              <svg class="icon icon-sm faq-chevron" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"></polyline></svg>
+            </summary>
+            <div class="faq-answer-wrap">
+              <div class="faq-answer-inner">
+                <div class="faq-answer">
+                  Absolutely. We adhere to strict customer data privacy protocols and do not require your device passcode unless diagnostics specifically demand testing.
+                </div>
+              </div>
+            </div>
+          </details>
+          <details class="faq-item">
+            <summary class="faq-question">
+              <span>Can I get a quote before committing to the repair?</span>
+              <svg class="icon icon-sm faq-chevron" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"></polyline></svg>
+            </summary>
+            <div class="faq-answer-wrap">
+              <div class="faq-answer-inner">
+                <div class="faq-answer">
+                  Yes. Our initial diagnostic quote is completely transparent and free. We only proceed once you approve the estimate.
+                </div>
+              </div>
+            </div>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- Subscribe / Discount Strip -->
+    <section class="subscribe-section" id="subscribe" data-section="subscribe" data-content-key="subscribe">
+      <div class="container subscribe-container">
+        <h2 class="section-title" id="subscribe-headline">Get ₱200 Off Your First Repair</h2>
+        <p class="section-subtitle" id="subscribe-subheadline">Subscribe for exclusive device care guides, maintenance tips, and VIP promotional discounts.</p>
+        <form class="subscribe-form" id="subscribe-form">
+          <input type="email" class="form-control" id="subscribe-input" placeholder="Enter your email address" required>
+          <button type="submit" class="btn btn-secondary" id="subscribe-btn">Claim Discount</button>
+        </form>
+      </div>
+    </section>
+
+    <!-- Contact & Business Hours Section -->
+    <section class="section contact-section" id="contact" data-section="contact" data-content-key="contact">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title">Visit Us or Get In Touch</h2>
+          <p class="section-subtitle">Walk-ins welcome during open hours or call us for instant assistance.</p>
+        </div>
+        <div class="contact-grid">
+          <div class="contact-card">
+            <h3>Contact Information</h3>
+            <div class="contact-item">
+              <div class="contact-label">Phone</div>
+              <a href="tel:+63299998888" class="contact-value" id="contact-phone">+63 2 9999 8888</a>
+            </div>
+            <div class="contact-item">
+              <div class="contact-label">Email</div>
+              <a href="mailto:repairs@cebutechmasters.ph" class="contact-value" id="contact-email">repairs@cebutechmasters.ph</a>
+            </div>
+            <div class="contact-item">
+              <div class="contact-label">Address</div>
+              <div class="contact-value" id="contact-address">452 Taft Avenue, Ermita, Cebu</div>
+            </div>
+          </div>
+
+          <div class="hours-card" data-section="hours" data-content-key="contact.hours">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px;">
+              <h3 style="margin-bottom: 0;">Operating Hours</h3>
+              <span class="open-status-badge" id="open-status-badge">
+                <span class="status-dot pulse-beacon"></span>
+                <span id="status-text">Checking Hours...</span>
+              </span>
+            </div>
+            <div id="hours-list">
+              <div class="hours-item">Monday - Friday: 9:00 AM - 7:00 PM</div>
+              <div class="hours-item">Saturday: 8:00 AM - 6:00 PM</div>
+              <div class="hours-item">Sunday: Closed</div>
+            </div>
+            <div style="margin-top: 20px; padding-top: 16px; border-top: 1px solid var(--border-color);">
+              <a href="https://maps.google.com/?q=452+Taft+Avenue+Ermita+Cebu" target="_blank" rel="noopener noreferrer" class="btn btn-outline btn-block hover-bounce" id="directions-btn">
+                <svg class="icon icon-sm" viewBox="0 0 24 24"><polygon points="3 11 22 2 13 21 11 13 3 11"></polygon></svg>
+                <span>Get Driving Directions</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Modal Booking Dialog (Hybrid: Native Lead Capture + Lazy External Scheduler Facade) -->
+  <div class="modal-overlay" id="quote-modal" role="dialog" aria-modal="true" aria-labelledby="modal-heading">
+    <div class="modal-box">
+      <div class="modal-header">
+        <h3 class="modal-title" id="modal-heading">Book Fast Repair Service</h3>
+        <button class="modal-close" id="modal-close-btn" aria-label="Close dialog">&times;</button>
+      </div>
+      <div class="modal-body">
+        <!-- Optional External Scheduler Facade (e.g. Calendly/Acuity iframe loaded on demand) -->
+        <div id="modal-external-embed" class="modal-external-embed" style="display: none;"></div>
+
+        <!-- Native High-Speed Form (Default: Zero external JS, <200ms submission) -->
+        <form id="modal-quote-form">
+          <div class="form-row">
+            <div class="form-group">
+              <label class="form-label" for="modal-device">Device / Service</label>
+              <select class="form-control" id="modal-device" required>
+                <option value="iPhone">iPhone</option>
+                <option value="Android">Samsung / Android</option>
+                <option value="MacBook">MacBook</option>
+                <option value="Laptop">Windows Laptop</option>
+                <option value="iPad">iPad / Tablet</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="modal-service">Repair Needed</label>
+              <select class="form-control" id="modal-service" required>
+                <option value="Screen">Screen Replacement</option>
+                <option value="Battery">Battery Replacement</option>
+                <option value="Water Damage">Water Damage</option>
+                <option value="Data Recovery">Data Recovery</option>
+                <option value="Diagnostics">General Diagnostic</option>
+              </select>
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="modal-name">Your Name</label>
+            <input type="text" class="form-control" id="modal-name" placeholder="Full Name" required autocomplete="name">
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="modal-phone">Phone / WhatsApp</label>
+            <input type="tel" class="form-control" id="modal-phone" placeholder="+63 917 000 0000" required autocomplete="tel">
+          </div>
+          <button type="submit" class="btn btn-primary btn-block">Confirm Appointment Request</button>
+          <div class="form-feedback"></div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- @component:footer -->
+<!-- Site Footer -->
+  <footer class="site-footer" id="site-footer" data-section="footer" data-content-key="footer">
+    <div class="container">
+      <p id="footer-copyright">© 2026 Cebu Tech Masters. All rights reserved.</p>
+      <p id="footer-notice">Certified hardware diagnostics and quick-turnaround repair center.</p>
+    </div>
+  </footer>
+
+  <!-- Milestone 2: Mobile Sticky Action Bar (<768px screens) -->
+  <nav class="mobile-action-bar" id="mobile-action-bar" aria-label="Mobile Quick Actions">
+    <a href="tel:+63299998888" class="mobile-action-item" id="mobile-call-btn">
+      <svg class="icon icon-sm" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+      <span>Call</span>
+    </a>
+    <a href="https://wa.me/639170000000" target="_blank" rel="noopener noreferrer" class="mobile-action-item" id="mobile-chat-btn">
+      <svg class="icon icon-sm" viewBox="0 0 24 24"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path></svg>
+      <span>WhatsApp</span>
+    </a>
+    <a href="https://maps.google.com/?q=452+Taft+Avenue+Ermita+Cebu" target="_blank" rel="noopener noreferrer" class="mobile-action-item" id="mobile-map-btn">
+      <svg class="icon icon-sm" viewBox="0 0 24 24"><polygon points="3 11 22 2 13 21 11 13 3 11"></polygon></svg>
+      <span>Map</span>
+    </a>
+    <a href="#quote-modal" class="mobile-action-item primary-action" id="mobile-book-btn" data-open-modal="quote-modal">
+      <svg class="icon icon-sm" viewBox="0 0 24 24"><rect width="18" height="18" x="3" y="4" rx="2" ry="2"></rect><line x1="16" x2="16" y1="2" y2="6"></line><line x1="8" x2="8" y1="2" y2="6"></line><line x1="3" x2="21" y1="10" y2="10"></line></svg>
+      <span>Book Repair</span>
+    </a>
+  </nav>
+<!-- /@component:footer -->
+
+  <script src="app.js"></script>
+</body>
+</html>
