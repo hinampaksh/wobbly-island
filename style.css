@@ -112,14 +112,14 @@ html {
   color: var(--bs-text-main);
   font-family: var(--bs-font-body);
   -webkit-font-smoothing: antialiased;
-  overflow-x: hidden;
+  overflow-x: clip;
   scroll-behavior: smooth;
 }
 
 body {
   background: var(--bs-sky-top);
   color: var(--bs-text-main);
-  overflow-x: hidden;
+  overflow-x: clip;
   selection-background-color: var(--bs-sun);
 }
 
@@ -267,13 +267,14 @@ body {
 }
 
 .camera-viewport {
-  position: sticky;
+  position: fixed;
   top: 0;
   left: 0;
   width: 100vw;
   height: 100vh;
   overflow: hidden;
   background: linear-gradient(180deg, var(--bs-sky-top) 0%, var(--bs-sky-mid) 58%, var(--bs-sky-warm) 100%);
+  z-index: 5;
 }
 
 /* --- LAYER 1: CELESTIAL SKY, SPINNING SUN & RAINBOWS (0.15x Speed) --- */
