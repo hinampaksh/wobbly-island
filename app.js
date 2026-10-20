@@ -1,646 +1,380 @@
-// ==============================================================================
-// Feather / Lucide Equivalent Inline SVGs (0 KB external request, instant paint)
-// ==============================================================================
-const ICONS = {
-  phone: '<svg class="icon icon-lg" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>',
-  laptop: '<svg class="icon icon-lg" viewBox="0 0 24 24"><path d="M20 16V7a2 2 0 0 0-2-2H6a2 2 0 0 0-2 2v9m16 0H4m16 0 1.28 2.55A1 1 0 0 1 20.28 20H3.72a1 1 0 0 1-.89-1.45L4 16"></path></svg>',
-  tablet: '<svg class="icon icon-lg" viewBox="0 0 24 24"><rect width="16" height="20" x="4" y="2" rx="2" ry="2"></rect><line x1="12" x2="12.01" y1="18" y2="18"></line></svg>',
-  database: '<svg class="icon icon-lg" viewBox="0 0 24 24"><ellipse cx="12" cy="5" rx="9" ry="3"></ellipse><path d="M3 5V19A9 3 0 0 0 21 19V5"></path><path d="M3 12A9 3 0 0 0 21 12"></path></svg>',
-  shield: '<svg class="icon icon-lg" viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>',
-  clock: '<svg class="icon icon-lg" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>',
-  'badge-check': '<svg class="icon icon-lg" viewBox="0 0 24 24"><path d="M3.85 8.62a4 4 0 0 1 4.78-4.77 4 4 0 0 1 6.74 0 4 4 0 0 1 4.78 4.78 4 4 0 0 1 0 6.74 4 4 0 0 1-4.77 4.78 4 4 0 0 1-6.75 0 4 4 0 0 1-4.78-4.77 4 4 0 0 1 0-6.76Z"></path><path d="m9 12 2 2 4-4"></path></svg>',
-  zap: '<svg class="icon icon-sm" viewBox="0 0 24 24"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon></svg>',
-  chevron: '<svg class="icon icon-sm faq-chevron" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"></polyline></svg>'
-};
+/**
+ * WOBBLY ISLAND · KINETIC HORIZONTAL STORYBOOK ENGINE
+ * 1. 6-Layer GPU Parallax & Velocity-Reactive Submarine Physics
+ * 2. Web Audio API Cartoon Sound Synthesizer (0 KB External Audio Bloat)
+ * 3. Retro Toon-TV Channel Flipper & Passport Stamp Booth
+ * 4. Zero-CLS In-Place Content Hydration from content.json
+ */
 
-// ==============================================================================
-// Main Hydration Function (Embedded First + R2 Edge + Local Fallback)
-// ==============================================================================
-async function loadSiteContent() {
-  let data;
+(function () {
+  const runwayDriver = document.getElementById('runway-driver');
+  const worldTrack = document.getElementById('world-track');
+  const layerSky = document.getElementById('layer-sky');
+  const layerClouds = document.getElementById('layer-clouds');
+  const layerMountains = document.getElementById('layer-mountains');
+  const layerFlora = document.getElementById('layer-flora');
+  const spinningSun = document.getElementById('spinning-sun');
+  const subVessel = document.getElementById('sub-vessel');
+  const subPropeller = document.getElementById('sub-propeller');
+  const waypoints = document.querySelectorAll('.map-waypoint');
 
-  // 1. Instant Embedded Data (0ms, 0 network request, prevents cross-site flash)
-  if (window.__SITE_CONTENT__) {
-    data = window.__SITE_CONTENT__;
-  } else if (window.__FASHION_CONTENT__) {
-    data = window.__FASHION_CONTENT__;
-  } else {
-    // 2. Dynamic site target via <html data-site="...">
-    const siteSlug = document.documentElement.getAttribute('data-site') || 'cebu-tech-masters';
-    const R2_EDGE = `https://agency-content-router.alfiezafra.workers.dev/${siteSlug}/content.json`;
+  let lastScrollY = window.scrollY;
+  let currentVelocity = 0;
+  let propellerAngle = 0;
 
-    try {
-      const res = await fetch(`${R2_EDGE}?t=${Date.now()}`);
-      if (!res.ok) throw new Error(`R2 HTTP ${res.status}`);
-      data = await res.json();
-    } catch (r2Err) {
-      // Fail-safe Fallback: Read bundled local content.json
-      console.warn('R2 edge fetch unavailable, falling back to local content.json:', r2Err);
-      const localRes = await fetch('./content.json');
-      data = await localRes.json();
+  // ==========================================================================
+  // 1. MULTI-LAYER PARALLAX & VELOCITY TILT LOOP
+  // ==========================================================================
+  function updateParallaxStage() {
+    if (!runwayDriver || !worldTrack) return;
+
+    const maxScrollY = Math.max(1, runwayDriver.scrollHeight - window.innerHeight);
+    const scrollY = Math.max(0, Math.min(window.scrollY, maxScrollY));
+    const progress = scrollY / maxScrollY;
+
+    // Calculate scroll velocity for submarine pitch/tilt
+    const deltaY = scrollY - lastScrollY;
+    lastScrollY = scrollY;
+    currentVelocity = Math.max(-22, Math.min(22, deltaY * 0.35));
+    propellerAngle += Math.abs(deltaY) * 1.8 + 4;
+
+    // Maximum horizontal travel distance for main world track
+    const maxWorldTranslate = Math.max(0, worldTrack.scrollWidth - window.innerWidth);
+
+    // GPU-accelerated 3D translations across all 5 moving depth planes
+    const worldX = -progress * maxWorldTranslate;
+    worldTrack.style.transform = `translate3d(${worldX}px, 0, 0)`;
+
+    if (layerSky) {
+      layerSky.style.transform = `translate3d(${worldX * 0.16}px, 0, 0)`;
     }
-  }
-
-  try {
-    // 0. Theme Tokens & CSS Variables (supports standalone preview page overrides)
-    if (window.__THEME_OVERRIDE__) {
-      data._theme = window.__THEME_OVERRIDE__;
+    if (layerClouds) {
+      layerClouds.style.transform = `translate3d(${worldX * 0.34}px, 0, 0)`;
+    }
+    if (layerMountains) {
+      layerMountains.style.transform = `translate3d(${worldX * 0.55}px, 0, 0)`;
+    }
+    if (layerFlora) {
+      layerFlora.style.transform = `translate3d(${worldX * 1.48}px, 0, 0)`;
     }
 
-    if (data._theme) {
-      const rootStyle = document.documentElement.style;
+    // Rotate the smiling sun as you travel across the island
+    if (spinningSun) {
+      spinningSun.style.transform = `rotate(${progress * 540}deg)`;
+    }
 
-      // Motion Toggle Support (true by default, false disables all transitions/animations)
-      if (typeof data._theme.motion === 'boolean') {
-        document.documentElement.setAttribute('data-motion', data._theme.motion ? 'true' : 'false');
+    // Submarine moves horizontally across bottom viewport and pitches nose with velocity
+    if (subVessel) {
+      const subTravelX = progress * (window.innerWidth * 0.62);
+      const bobY = Math.sin(progress * Math.PI * 10) * 8;
+      subVessel.style.transform = `translate3d(${subTravelX}px, ${bobY}px, 0) rotate(${currentVelocity * 0.65}deg)`;
+    }
+    if (subPropeller) {
+      subPropeller.style.transform = `rotate(${propellerAngle}deg)`;
+    }
+
+    // Update active HUD waypoint pill (Hover-Active Mirroring)
+    const activeZoneIndex = Math.min(4, Math.floor(progress * 5 + 0.15));
+    waypoints.forEach((btn, idx) => {
+      if (idx === activeZoneIndex) {
+        btn.classList.add('active');
+        btn.setAttribute('aria-current', 'page');
       } else {
-        document.documentElement.setAttribute('data-motion', 'true');
+        btn.classList.remove('active');
+        btn.removeAttribute('aria-current');
       }
-
-      // Theme Style Preset Tagging (e.g. linear-dark, stripe-vibrant, editorial-warm)
-      if (data._theme.style) {
-        document.documentElement.setAttribute('data-theme-style', data._theme.style);
-      }
-
-      if (data._theme.colors) {
-        Object.entries(data._theme.colors).forEach(([k, v]) => {
-          rootStyle.setProperty(`--${k.replace(/_/g, '-')}`, v);
-        });
-      }
-
-      const FONT_PRESETS = {
-        'modern-clean': {
-          heading: '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif',
-          body: '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif',
-          accent: '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif',
-          googleUrl: null
-        },
-        'friendly-service': {
-          heading: '"Plus Jakarta Sans", sans-serif',
-          body: '"Plus Jakarta Sans", sans-serif',
-          accent: '"Plus Jakarta Sans", sans-serif',
-          googleUrl: 'https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&display=swap'
-        },
-        'tech-authority': {
-          heading: '"Space Grotesk", sans-serif',
-          body: '"Inter", sans-serif',
-          accent: '"Space Grotesk", sans-serif',
-          googleUrl: 'https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@600;700&display=swap'
-        },
-        'bold-industrial': {
-          heading: '"Oswald", sans-serif',
-          body: 'Roboto, sans-serif',
-          accent: '"Oswald", sans-serif',
-          googleUrl: 'https://fonts.googleapis.com/css2?family=Oswald:wght@600;700&family=Roboto:wght@400;500&display=swap'
-        },
-        'warm-artisan': {
-          heading: '"Fraunces", serif',
-          body: '"Outfit", sans-serif',
-          accent: '"Fraunces", serif',
-          googleUrl: 'https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700&family=Outfit:wght@400;500;600&display=swap'
-        },
-        'premium-luxury': {
-          heading: '"Playfair Display", serif',
-          body: 'Inter, sans-serif',
-          accent: '"Playfair Display", serif',
-          googleUrl: 'https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:ital,wght@0,600;0,800&display=swap'
-        },
-        'modern-editorial': {
-          heading: '"DM Serif Display", serif',
-          body: '"DM Sans", sans-serif',
-          accent: '"DM Serif Display", serif',
-          googleUrl: 'https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=DM+Serif+Display&display=swap'
-        },
-        'futuristic-code': {
-          heading: '"Space Grotesk", sans-serif',
-          body: '"Space Mono", monospace',
-          accent: '"Space Grotesk", sans-serif',
-          googleUrl: 'https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@600;700&family=Space+Mono:wght@400;700&display=swap'
-        }
-      };
-
-      const typo = data._theme.typography || {};
-      const preset = typo.preset && FONT_PRESETS[typo.preset] ? FONT_PRESETS[typo.preset] : FONT_PRESETS['modern-clean'];
-      
-      const bodyFont = typo.body || preset.body;
-      const headingFont = typo.heading || preset.heading;
-      const accentFont = typo.accent || preset.accent;
-      const googleUrl = typo.google_fonts_url || preset.googleUrl;
-
-      if (googleUrl && !document.getElementById('theme-font-link')) {
-        const link = document.createElement('link');
-        link.id = 'theme-font-link';
-        link.rel = 'stylesheet';
-        link.href = googleUrl;
-        document.head.appendChild(link);
-      }
-
-      rootStyle.setProperty('--font-body', bodyFont);
-      rootStyle.setProperty('--font-heading', headingFont);
-      rootStyle.setProperty('--font-accent', accentFont);
-      rootStyle.setProperty('--font-family', bodyFont);
-
-      if (data._theme.layout) {
-        Object.entries(data._theme.layout).forEach(([k, v]) => {
-          rootStyle.setProperty(`--${k.replace(/_/g, '-')}`, v);
-        });
-      }
-    }
-
-    // 1. Navigation / Brand
-    if (data.brand) {
-      document.querySelectorAll('.brand-name').forEach(el => el.textContent = data.brand.name || '');
-      const brandCta = document.getElementById('nav-cta');
-      if (brandCta) brandCta.textContent = data.brand.cta_button || 'Book a Repair';
-      document.title = `${data.brand.name} | ${data.brand.tagline || 'Device Repairs'}`;
-    }
-
-    // 2. Hero Section
-    if (data.hero) {
-      const badge = document.getElementById('hero-badge');
-      if (badge) badge.innerHTML = `${ICONS.zap || '⚡'} <span>${data.hero.badge.replace(/⚡/g, '').trim()}</span>`;
-
-      const headline = document.getElementById('hero-headline');
-      if (headline) headline.textContent = data.hero.headline || '';
-
-      const subheadline = document.getElementById('hero-subheadline');
-      if (subheadline) subheadline.textContent = data.hero.subheadline || '';
-
-      const primaryCta = document.getElementById('hero-primary-cta');
-      if (primaryCta) primaryCta.textContent = data.hero.primary_cta || '';
-
-      const secondaryCta = document.getElementById('hero-secondary-cta');
-      if (secondaryCta) secondaryCta.textContent = data.hero.secondary_cta || '';
-    }
-
-    // 3. Stats Grid (In-place update)
-    const statsContainer = document.getElementById('stats-grid');
-    if (statsContainer && Array.isArray(data.stats)) {
-      statsContainer.innerHTML = data.stats.map(stat => `
-        <div class="stat-card hover-lift">
-          <div class="stat-value">${stat.value}</div>
-          <div class="stat-label">${stat.label}</div>
-        </div>
-      `).join('');
-    }
-
-    // 4. Services Grid
-    const servicesContainer = document.getElementById('services-grid');
-    if (servicesContainer && Array.isArray(data.services)) {
-      servicesContainer.innerHTML = data.services.map(srv => {
-        const imgHtml = srv.image ? `
-          <img class="service-card-img" src="${srv.image.src}" alt="${srv.image.alt || srv.title}" width="${srv.image.width || 1000}" height="${srv.image.height || 666}" loading="lazy">
-        ` : '';
-        return `
-          <div class="service-card hover-lift" id="${srv.id || ''}">
-            ${imgHtml}
-            <div class="service-icon">${ICONS[srv.icon] || ICONS.phone}</div>
-            <h3 class="service-title">${srv.title}</h3>
-            <p class="service-description">${srv.description}</p>
-            <div class="service-meta">
-              <span class="service-price">${srv.starting_price}</span>
-              <span class="service-turnaround">${srv.turnaround}</span>
-            </div>
-          </div>
-        `;
-      }).join('');
-    }
-
-    // 5. Why Choose Us
-    const whyContainer = document.getElementById('why-grid');
-    if (whyContainer && Array.isArray(data.why_us)) {
-      whyContainer.innerHTML = data.why_us.map(item => `
-        <div class="why-card hover-lift">
-          <div class="why-icon">${ICONS[item.icon] || ICONS.shield}</div>
-          <h3 class="why-title">${item.title}</h3>
-          <p class="why-desc">${item.description}</p>
-        </div>
-      `).join('');
-    }
-
-    // 6. Testimonials Slider
-    const testContainer = document.getElementById('testimonials-slider');
-    if (testContainer && Array.isArray(data.testimonials)) {
-      testContainer.innerHTML = data.testimonials.map(item => `
-        <div class="slider-item">
-          <div class="testimonial-card">
-            <div class="testimonial-rating">${item.rating}</div>
-            <p class="testimonial-quote">"${item.quote}"</p>
-            <div class="testimonial-author">${item.author}</div>
-            <div class="testimonial-location">${item.location}</div>
-          </div>
-        </div>
-      `).join('');
-    }
-
-    // 7. FAQ Accordion Module
-    const faqContainer = document.getElementById('faq-list');
-    if (faqContainer && Array.isArray(data.faq)) {
-      faqContainer.innerHTML = data.faq.map((item, idx) => `
-        <details class="faq-item" ${idx === 0 ? 'open' : ''}>
-          <summary class="faq-question">
-            <span>${item.question}</span>
-            ${ICONS.chevron}
-          </summary>
-          <div class="faq-answer-wrap">
-            <div class="faq-answer-inner">
-              <div class="faq-answer">
-                ${item.answer}
-              </div>
-            </div>
-          </div>
-        </details>
-      `).join('');
-    }
-
-    // 8. Quote Form Headings & Labels
-    if (data.quote_form) {
-      const qBadge = document.getElementById('quote-badge');
-      if (qBadge) qBadge.textContent = data.quote_form.badge;
-      const qHeadline = document.getElementById('quote-headline');
-      if (qHeadline) qHeadline.textContent = data.quote_form.headline;
-      const qSubheadline = document.getElementById('quote-subheadline');
-      if (qSubheadline) qSubheadline.textContent = data.quote_form.subheadline;
-      const qBtn = document.getElementById('quote-submit-btn');
-      if (qBtn) qBtn.textContent = data.quote_form.button_text;
-    }
-
-    // 9. Subscribe Section
-    if (data.subscribe) {
-      const subHeadline = document.getElementById('subscribe-headline');
-      if (subHeadline) subHeadline.textContent = data.subscribe.headline;
-      const subSubtitle = document.getElementById('subscribe-subheadline');
-      if (subSubtitle) subSubtitle.textContent = data.subscribe.subheadline;
-      const subBtn = document.getElementById('subscribe-btn');
-      if (subBtn) subBtn.textContent = data.subscribe.button_text;
-      const subInput = document.getElementById('subscribe-input');
-      if (subInput && data.subscribe.placeholder) subInput.placeholder = data.subscribe.placeholder;
-    }
-
-    // 10. Contact Info & Hours
-    if (data.contact) {
-      const phoneEl = document.getElementById('contact-phone');
-      if (phoneEl) {
-        phoneEl.textContent = data.contact.phone;
-        phoneEl.href = `tel:${data.contact.phone}`;
-      }
-
-      const emailEl = document.getElementById('contact-email');
-      if (emailEl) {
-        emailEl.textContent = data.contact.email;
-        emailEl.href = `mailto:${data.contact.email}`;
-      }
-
-      const addrEl = document.getElementById('contact-address');
-      if (addrEl) addrEl.textContent = data.contact.address;
-
-      // Mobile Sticky Action Bar Links & Phone/Map bindings
-      const mobileCall = document.getElementById('mobile-call-btn');
-      if (mobileCall && data.contact.phone) mobileCall.href = `tel:${data.contact.phone}`;
-
-      const addrClean = encodeURIComponent(data.contact.address || 'Cebu');
-      const mapUrl = `https://maps.google.com/?q=${addrClean}`;
-      const directionsBtn = document.getElementById('directions-btn');
-      if (directionsBtn) directionsBtn.href = mapUrl;
-      const mobileMap = document.getElementById('mobile-map-btn');
-      if (mobileMap) mobileMap.href = mapUrl;
-
-      // Real-Time Open / Closed Status Calculation
-      if (data.contact.hours) {
-        const hoursContainer = document.getElementById('hours-list');
-        if (hoursContainer) {
-          hoursContainer.innerHTML = Object.entries(data.contact.hours).map(([_, val]) => `
-            <div class="hours-item">${val}</div>
-          `).join('');
-        }
-        updateStoreStatus(data.contact.hours);
-      }
-    }
-
-    // 11. Footer
-    if (data.footer) {
-      const copyEl = document.getElementById('footer-copyright');
-      if (copyEl) copyEl.textContent = data.footer.copyright;
-      const noticeEl = document.getElementById('footer-notice');
-      if (noticeEl) noticeEl.textContent = data.footer.notice;
-    }
-
-    // 12. Dynamic Media Elements (Zero-CLS Image Hydration)
-    if (data.media) {
-      if (data.media.hero) {
-        const heroImg = document.getElementById('hero-img');
-        if (heroImg && data.media.hero.src) {
-          heroImg.src = data.media.hero.src;
-          if (data.media.hero.alt) heroImg.alt = data.media.hero.alt;
-        }
-      }
-      if (data.media.workspace) {
-        const quoteImg = document.getElementById('quote-img');
-        if (quoteImg && data.media.workspace.src) {
-          quoteImg.src = data.media.workspace.src;
-          if (data.media.workspace.alt) quoteImg.alt = data.media.workspace.alt;
-        }
-      }
-    }
-
-    // 13. Milestone 3: Automated Google LocalBusiness Structured Data (JSON-LD)
-    updateLocalBusinessSchema(data);
-
-  } catch (err) {
-    console.error('Failed to load site content:', err);
-  }
-}
-
-// ==============================================================================
-// Milestone 2: Real-Time Open / Closed Status Calculation
-// ==============================================================================
-function updateStoreStatus(hours) {
-  const badge = document.getElementById('open-status-badge');
-  const textEl = document.getElementById('status-text');
-  if (!badge || !textEl) return;
-
-  const now = new Date();
-  const day = now.getDay(); // 0 = Sunday, 1 = Monday, ..., 6 = Saturday
-  const currentMinutes = now.getHours() * 60 + now.getMinutes();
-
-  // Parse schedules based on standard Philippines business conventions
-  // Weekdays (Mon-Fri): 9:00 AM (540 mins) to 7:00 PM (1140 mins)
-  // Saturday: 8:00 AM (480 mins) to 6:00 PM (1080 mins)
-  // Sunday: Closed
-  let isOpen = false;
-  let closingMsg = '';
-
-  if (day >= 1 && day <= 5) {
-    if (currentMinutes >= 540 && currentMinutes < 1140) {
-      isOpen = true;
-      closingMsg = 'Open Now • Closes at 7:00 PM';
-    } else if (currentMinutes < 540) {
-      closingMsg = 'Closed • Opens at 9:00 AM';
-    } else {
-      closingMsg = day === 5 ? 'Closed • Opens Sat 8:00 AM' : 'Closed • Opens Tomorrow 9:00 AM';
-    }
-  } else if (day === 6) {
-    if (currentMinutes >= 480 && currentMinutes < 1080) {
-      isOpen = true;
-      closingMsg = 'Open Now • Closes at 6:00 PM';
-    } else if (currentMinutes < 480) {
-      closingMsg = 'Closed • Opens at 8:00 AM';
-    } else {
-      closingMsg = 'Closed • Opens Mon 9:00 AM';
-    }
-  } else {
-    closingMsg = 'Closed Today • Opens Mon 9:00 AM';
+    });
   }
 
-  textEl.textContent = closingMsg;
-  badge.className = `open-status-badge ${isOpen ? 'open' : 'closed'}`;
-}
+  // Smooth spring decay for submarine tilt when scrolling stops
+  setInterval(() => {
+    if (Math.abs(currentVelocity) > 0.2) {
+      currentVelocity *= 0.75;
+      updateParallaxStage();
+    }
+  }, 50);
 
-// ==============================================================================
-// Milestone 3: Automated Google LocalBusiness Schema Generator
-// ==============================================================================
-function updateLocalBusinessSchema(data) {
-  let scriptEl = document.getElementById('schema-local-business');
-  if (!scriptEl) {
-    scriptEl = document.createElement('script');
-    scriptEl.id = 'schema-local-business';
-    scriptEl.type = 'application/ld+json';
-    document.head.appendChild(scriptEl);
-  }
+  window.addEventListener('scroll', updateParallaxStage, { passive: true });
+  window.addEventListener('resize', updateParallaxStage, { passive: true });
+  updateParallaxStage();
 
-  const brand = data.brand || {};
-  const contact = data.contact || {};
-  const media = data.media || {};
+  // Horizontal Trackpad / Shift-Wheel Direct Support
+  window.addEventListener('wheel', (e) => {
+    if (Math.abs(e.deltaX) > Math.abs(e.deltaY)) {
+      window.scrollBy({ top: e.deltaX, behavior: 'instant' });
+    }
+  }, { passive: true });
 
-  const schemaObj = {
-    "@context": "https://schema.org",
-    "@type": "LocalBusiness",
-    "name": brand.name || "Cebu Tech Masters",
-    "description": data.hero ? data.hero.subheadline : undefined,
-    "image": media.hero ? `https://agency-content-router.alfiezafra.workers.dev/cebu-tech-masters/${media.hero.src}` : undefined,
-    "telephone": contact.phone,
-    "email": contact.email,
-    "priceRange": contact.price_range || "₱₱",
-    "address": {
-      "@type": "PostalAddress",
-      "streetAddress": contact.address || "452 Taft Avenue, Ermita",
-      "addressLocality": "Cebu City",
-      "addressRegion": "Cebu",
-      "postalCode": "6000",
-      "addressCountry": "PH"
-    },
-    "geo": contact.geo ? {
-      "@type": "GeoCoordinates",
-      "latitude": contact.geo.latitude,
-      "longitude": contact.geo.longitude
-    } : undefined,
-    "currenciesAccepted": contact.currencies_accepted || "PHP",
-    "paymentAccepted": contact.payment_accepted || "Cash, GCash, Maya, Credit Card"
+  // ==========================================================================
+  // 2. WAYPOINT NAVIGATION JUMPER
+  // ==========================================================================
+  window.jumpToZone = function (zoneIndex) {
+    playToonSound('whistle');
+    const maxScrollY = Math.max(1, runwayDriver.scrollHeight - window.innerHeight);
+    const targetRatios = [0, 0.23, 0.50, 0.76, 0.99];
+    const ratio = targetRatios[zoneIndex] ?? 0;
+    window.scrollTo({
+      top: maxScrollY * ratio,
+      behavior: 'smooth'
+    });
   };
 
-  scriptEl.textContent = JSON.stringify(schemaObj, null, 2);
-}
-
-// ==============================================================================
-// Interactive Handlers (Modal, Slider, Forms)
-// ==============================================================================
-function initInteractivity() {
-  // 1. Modal Logic
-  const modal = document.getElementById('quote-modal');
-  const openButtons = document.querySelectorAll('[data-open-modal="quote-modal"]');
-  const closeButton = document.getElementById('modal-close-btn');
-
-  function openModal() {
-    if (modal) {
-      modal.classList.add('active');
-      document.body.style.overflow = 'hidden';
+  // ==========================================================================
+  // 3. WEB AUDIO API CARTOON SYNTHESIZER (0 KB External Audio Files)
+  // ==========================================================================
+  let audioCtx = null;
+  function getAudioContext() {
+    if (!audioCtx) {
+      const AudioContextClass = window.AudioContext || window.webkitAudioContext;
+      audioCtx = new AudioContextClass();
     }
+    if (audioCtx.state === 'suspended') {
+      audioCtx.resume();
+    }
+    return audioCtx;
   }
 
-  function closeModal() {
-    if (modal) {
-      modal.classList.remove('active');
-      document.body.style.overflow = '';
-    }
-  }
+  window.playToonSound = function (type) {
+    try {
+      const ctx = getAudioContext();
+      const now = ctx.currentTime;
+      const osc = ctx.createOscillator();
+      const gain = ctx.createGain();
+      osc.connect(gain);
+      gain.connect(ctx.destination);
 
-  openButtons.forEach(btn => btn.addEventListener('click', (e) => {
-    e.preventDefault();
-    openModal();
-  }));
-
-  if (closeButton) closeButton.addEventListener('click', closeModal);
-  if (modal) {
-    modal.addEventListener('click', (e) => {
-      if (e.target === modal) closeModal();
-    });
-  }
-
-  document.addEventListener('keydown', (e) => {
-    if (e.key === 'Escape' && modal && modal.classList.contains('active')) {
-      closeModal();
-    }
-  });
-
-  // 2. Testimonial Slider Controls
-  const sliderTrack = document.getElementById('testimonials-slider');
-  const prevBtn = document.getElementById('slider-prev');
-  const nextBtn = document.getElementById('slider-next');
-
-  if (sliderTrack && prevBtn && nextBtn) {
-    prevBtn.addEventListener('click', () => {
-      sliderTrack.scrollBy({ left: -340, behavior: 'smooth' });
-    });
-    nextBtn.addEventListener('click', () => {
-      sliderTrack.scrollBy({ left: 340, behavior: 'smooth' });
-    });
-  }
-
-  // 3. Lead Capture Forms (Quote Form + Modal Quote Form + Subscribe Form)
-  ['quote-form', 'modal-quote-form'].forEach(formId => {
-    const form = document.getElementById(formId);
-    if (form) {
-      form.addEventListener('submit', async (e) => {
-        e.preventDefault();
-        const feedback = form.querySelector('.form-feedback');
-        const submitBtn = form.querySelector('button[type="submit"]');
-        const origBtnText = submitBtn ? submitBtn.textContent : 'Submit';
-
-        // Extract payload
-        const formData = new FormData(form);
-        const payload = Object.fromEntries(formData.entries());
-
-        if (submitBtn) {
-          submitBtn.disabled = true;
-          submitBtn.textContent = 'Sending request...';
-        }
-
-        try {
-          // If a custom lead webhook is defined in content.json, post to it
-          const webhookUrl = (window.__SITE_DATA__ && window.__SITE_DATA__.contact && window.__SITE_DATA__.contact.lead_webhook) || null;
-          if (webhookUrl) {
-            await fetch(webhookUrl, {
-              method: 'POST',
-              headers: { 'Content-Type': 'application/json' },
-              body: JSON.stringify({
-                site: (window.__SITE_DATA__ && window.__SITE_DATA__.brand && window.__SITE_DATA__.brand.name) || 'Client Website',
-                timestamp: new Date().toISOString(),
-                ...payload
-              })
-            });
-          }
-
-          if (feedback) {
-            feedback.textContent = '✅ Quote request received! A technician will call or message you in under 15 minutes.';
-            feedback.className = 'form-feedback success';
-          }
-          form.reset();
-        } catch (err) {
-          console.warn('Webhook dispatch error:', err);
-          if (feedback) {
-            feedback.textContent = '✅ Request logged! We will reach out shortly.';
-            feedback.className = 'form-feedback success';
-          }
-        } finally {
-          if (submitBtn) {
-            submitBtn.disabled = false;
-            submitBtn.textContent = origBtnText;
-          }
-        }
-      });
-    }
-  });
-
-  // 4. Universal Smooth Drawer & Accordion Engine (.primitive-drawer-accordion & #faq-list)
-  const drawerAccordions = document.querySelectorAll('.primitive-drawer-accordion, .faq-grid, #faq-list');
-  drawerAccordions.forEach(acc => {
-    acc.querySelectorAll('.drawer-item, .faq-item, details').forEach(item => {
-      const header = item.querySelector('.drawer-header, .faq-question, summary');
-      const wrapper = item.querySelector('.drawer-content-wrapper, .faq-answer-wrapper, .faq-answer-wrap');
-      if (!header || !wrapper) return;
-
-      if (item.hasAttribute('open')) {
-        item.classList.add('is-open');
-        wrapper.style.height = wrapper.scrollHeight + 'px';
+      if (type === 'boing') {
+        osc.type = 'sine';
+        osc.frequency.setValueAtTime(160, now);
+        osc.frequency.exponentialRampToValueAtTime(640, now + 0.14);
+        osc.frequency.exponentialRampToValueAtTime(220, now + 0.28);
+        osc.frequency.exponentialRampToValueAtTime(520, now + 0.42);
+        gain.gain.setValueAtTime(0.32, now);
+        gain.gain.exponentialRampToValueAtTime(0.01, now + 0.45);
+        osc.start(now);
+        osc.stop(now + 0.45);
+      } else if (type === 'honk') {
+        osc.type = 'sawtooth';
+        osc.frequency.setValueAtTime(240, now);
+        osc.frequency.setValueAtTime(310, now + 0.12);
+        osc.frequency.exponentialRampToValueAtTime(180, now + 0.36);
+        gain.gain.setValueAtTime(0.28, now);
+        gain.gain.exponentialRampToValueAtTime(0.01, now + 0.38);
+        osc.start(now);
+        osc.stop(now + 0.38);
+      } else if (type === 'whistle') {
+        osc.type = 'triangle';
+        osc.frequency.setValueAtTime(320, now);
+        osc.frequency.exponentialRampToValueAtTime(1180, now + 0.26);
+        gain.gain.setValueAtTime(0.25, now);
+        gain.gain.exponentialRampToValueAtTime(0.01, now + 0.28);
+        osc.start(now);
+        osc.stop(now + 0.28);
+      } else if (type === 'bubble') {
+        osc.type = 'sine';
+        osc.frequency.setValueAtTime(280, now);
+        osc.frequency.linearRampToValueAtTime(780, now + 0.09);
+        osc.frequency.setValueAtTime(360, now + 0.11);
+        osc.frequency.linearRampToValueAtTime(920, now + 0.22);
+        gain.gain.setValueAtTime(0.3, now);
+        gain.gain.exponentialRampToValueAtTime(0.01, now + 0.24);
+        osc.start(now);
+        osc.stop(now + 0.24);
+      } else if (type === 'zap') {
+        osc.type = 'sawtooth';
+        osc.frequency.setValueAtTime(980, now);
+        osc.frequency.exponentialRampToValueAtTime(110, now + 0.22);
+        gain.gain.setValueAtTime(0.26, now);
+        gain.gain.exponentialRampToValueAtTime(0.01, now + 0.24);
+        osc.start(now);
+        osc.stop(now + 0.24);
+      } else if (type === 'party') {
+        osc.type = 'square';
+        osc.frequency.setValueAtTime(440, now);
+        osc.frequency.setValueAtTime(554, now + 0.08);
+        osc.frequency.setValueAtTime(659, now + 0.16);
+        osc.frequency.setValueAtTime(880, now + 0.24);
+        gain.gain.setValueAtTime(0.22, now);
+        gain.gain.exponentialRampToValueAtTime(0.01, now + 0.42);
+        osc.start(now);
+        osc.stop(now + 0.42);
       }
+    } catch (_) {
+      // Ignore audio errors if blocked by browser autoplay policy
+    }
+  };
 
-      header.addEventListener('click', (e) => {
-        e.preventDefault();
-        const isOpen = item.classList.contains('is-open');
+  // ==========================================================================
+  // 4. INTERACTIVE CHARACTERS, SUBMARINE, TV CHANNELS & CONFETTI CANNON
+  // ==========================================================================
+  window.triggerSubmarineHorn = function () {
+    playToonSound('honk');
+    if (subVessel) {
+      subVessel.classList.add('boinging');
+      setTimeout(() => subVessel.classList.remove('boinging'), 1400);
+    }
+    burstCartoonShapes(window.innerWidth * 0.18, window.innerHeight * 0.78);
+  };
 
-        if (isOpen) {
-          wrapper.style.height = wrapper.scrollHeight + 'px';
-          requestAnimationFrame(() => {
-            wrapper.style.height = '0px';
-          });
-          item.classList.remove('is-open');
-          setTimeout(() => {
-            item.removeAttribute('open');
-          }, 340);
-        } else {
-          item.setAttribute('open', '');
-          item.classList.add('is-open');
-          wrapper.style.height = '0px';
-          requestAnimationFrame(() => {
-            wrapper.style.height = wrapper.scrollHeight + 'px';
-          });
-        }
-      });
+  window.boingCharacterCard = function (cardEl, soundType) {
+    playToonSound(soundType || 'boing');
+    cardEl.classList.remove('is-boinging');
+    void cardEl.offsetWidth; // Reflow to restart rubber-band animation
+    cardEl.classList.add('is-boinging', 'show-speech');
+    const rect = cardEl.getBoundingClientRect();
+    burstCartoonShapes(rect.left + rect.width / 2, rect.top + 60);
+    setTimeout(() => cardEl.classList.remove('show-speech'), 2200);
+  };
+
+  // Retro Toon-TV Episode Database
+  let episodesList = [
+    {
+      ch: 'CH 01',
+      osd: '📺 CH 01 · MARMALADE GEYSER',
+      title: 'The Great Marmalade Geyser',
+      desc: 'Barnaby accidentally plugs his toaster backpack into Mount Fizzy-Pop, turning the entire lagoon into warm strawberry jam!',
+      filter: 'saturate(1.3) hue-rotate(0deg)'
+    },
+    {
+      ch: 'CH 02',
+      osd: '📺 CH 02 · TICKLE-CRABS',
+      title: 'Attack of the Tickle-Crabs',
+      desc: "A swarm of neon disco crabs steals Captain Pip's favorite compass. Only Professor Squish's bassoon solo can save the day!",
+      filter: 'saturate(1.6) hue-rotate(110deg)'
+    },
+    {
+      ch: 'CH 03',
+      osd: '📺 CH 03 · CLOUD RACE',
+      title: 'The Upside-Down Cloud Race',
+      desc: 'Gravity flips upside down at noon! The crew must race flying bathtubs through the Cotton Candy Canyon before dinner.',
+      filter: 'saturate(1.5) hue-rotate(240deg)'
+    }
+  ];
+
+  let currentChIndex = 0;
+  let knobRotation = 0;
+
+  window.switchToonChannel = function (index, btnEl) {
+    playToonSound('zap');
+    currentChIndex = index;
+    const ep = episodesList[index] || episodesList[0];
+
+    const osd = document.getElementById('tv-osd-label');
+    const title = document.getElementById('ep-title');
+    const desc = document.getElementById('ep-desc');
+    const video = document.getElementById('toon-tv-video');
+    const knob = document.getElementById('tv-knob');
+
+    if (osd) osd.textContent = ep.osd;
+    if (title) title.textContent = ep.title;
+    if (desc) desc.textContent = ep.desc;
+    if (video) {
+      video.style.filter = ep.filter;
+      video.style.transform = 'scale(1.06)';
+      setTimeout(() => { video.style.transform = 'scale(1)'; }, 220);
+    }
+
+    knobRotation += 120;
+    if (knob) knob.style.transform = `rotate(${knobRotation}deg)`;
+
+    document.querySelectorAll('.ch-btn').forEach((b, i) => {
+      b.classList.toggle('active', i === index);
     });
-  });
+  };
 
-  // 5. Universal Zero-Shift Scroll-Spy & Active State Observer
-  const navAnchors = Array.from(document.querySelectorAll('.nav-links a, .el-menu-links a')).filter(a => {
-    const href = a.getAttribute('href') || '';
-    return href.includes('#');
-  });
+  window.cycleNextChannel = function () {
+    const next = (currentChIndex + 1) % episodesList.length;
+    const btns = document.querySelectorAll('.ch-btn');
+    switchToonChannel(next, btns[next]);
+  };
 
-  const sections = [];
-  navAnchors.forEach(a => {
-    const href = a.getAttribute('href') || '';
-    const hash = href.substring(href.indexOf('#') + 1);
-    const el = document.getElementById(hash);
-    if (el && !sections.includes(el)) sections.push(el);
-  });
+  // Soundboard Gummy Pads
+  window.triggerSoundPad = function (padEl, soundType, statusText, fizzPct) {
+    playToonSound(soundType);
+    padEl.classList.add('pressed');
+    setTimeout(() => padEl.classList.remove('pressed'), 180);
 
-  if (sections.length > 0 && 'IntersectionObserver' in window) {
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          const currentId = entry.target.getAttribute('id');
-          navAnchors.forEach(a => {
-            const href = a.getAttribute('href') || '';
-            const hash = href.substring(href.indexOf('#') + 1);
-            if (hash === currentId) {
-              a.classList.add('active');
-              a.setAttribute('aria-current', 'true');
-            } else {
-              a.classList.remove('active');
-              a.removeAttribute('aria-current');
-            }
-          });
-        }
+    const readout = document.getElementById('factory-readout');
+    const fizzBar = document.getElementById('fizz-bar');
+    if (readout) readout.textContent = statusText;
+    if (fizzBar) fizzBar.style.width = `${fizzPct}%`;
+
+    const rect = padEl.getBoundingClientRect();
+    burstCartoonShapes(rect.left + rect.width / 2, rect.top + 20);
+  };
+
+  // Passport Stamp Finale
+  window.stampPassport = function () {
+    playToonSound('party');
+    const input = document.getElementById('explorer-name');
+    const card = document.getElementById('passport-card');
+    const confirm = document.getElementById('passport-confirmation');
+    const name = (input && input.value.trim()) ? input.value.trim().toUpperCase() : 'CAPTAIN WOBBLER';
+
+    if (card) card.classList.add('is-stamped');
+    if (confirm) {
+      confirm.textContent = `🎉 OFFICIAL STAMP GRANTED FOR EXPLORER ${name}! WELCOME ABOARD!`;
+    }
+    const rect = card.getBoundingClientRect();
+    burstCartoonShapes(rect.left + rect.width / 2, rect.top + rect.height / 2);
+  };
+
+  // Pure SVG / DOM Cartoon Particle Burst
+  function burstCartoonShapes(originX, originY) {
+    const colors = ['#FF542E', '#00D67F', '#7B3FE4', '#FFD41F', '#FF499E', '#00CCF5'];
+    for (let i = 0; i < 12; i++) {
+      const dot = document.createElement('div');
+      const size = Math.floor(Math.random() * 14) + 10;
+      dot.style.position = 'fixed';
+      dot.style.left = `${originX}px`;
+      dot.style.top = `${originY}px`;
+      dot.style.width = `${size}px`;
+      dot.style.height = `${size}px`;
+      dot.style.background = colors[i % colors.length];
+      dot.style.border = '2.5px solid #1A142D';
+      dot.style.borderRadius = i % 2 === 0 ? '50%' : '4px';
+      dot.style.zIndex = '999';
+      dot.style.pointerEvents = 'none';
+      dot.style.transition = 'transform 0.75s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.75s ease';
+      document.body.appendChild(dot);
+
+      const angle = (Math.PI * 2 * i) / 12;
+      const dist = 50 + Math.random() * 80;
+      const tx = Math.cos(angle) * dist;
+      const ty = Math.sin(angle) * dist - 30;
+
+      requestAnimationFrame(() => {
+        dot.style.transform = `translate3d(${tx}px, ${ty}px, 0) rotate(${Math.random() * 260}deg) scale(0.3)`;
+        dot.style.opacity = '0';
       });
-    }, {
-      rootMargin: '-20% 0px -65% 0px',
-      threshold: 0
-    });
-
-    sections.forEach(sec => observer.observe(sec));
-
-    // Reset active indicator when scrolled to top of page (Hero section)
-    window.addEventListener('scroll', () => {
-      if (window.scrollY < 80) {
-        navAnchors.forEach(a => {
-          a.classList.remove('active');
-          a.removeAttribute('aria-current');
-        });
-      }
-    }, { passive: true });
+      setTimeout(() => dot.remove(), 800);
+    }
   }
-}
 
-document.addEventListener('DOMContentLoaded', () => {
-  loadSiteContent();
-  initInteractivity();
-});
+  // ==========================================================================
+  // 5. ZERO-CLS IN-PLACE HYDRATION FROM CONTENT.JSON
+  // ==========================================================================
+  fetch('content.json')
+    .then((res) => (res.ok ? res.json() : null))
+    .then((data) => {
+      if (!data) return;
+      if (data.nav && data.nav.brand) {
+        const el = document.getElementById('nav-brand-text');
+        if (el) el.textContent = data.nav.brand;
+      }
+      if (data.hero) {
+        const subtitle = document.getElementById('hero-subtitle');
+        if (subtitle && data.hero.subtitle) subtitle.textContent = data.hero.subtitle;
+      }
+      if (data.theater && Array.isArray(data.theater.episodes)) {
+        episodesList = data.theater.episodes.map((ep, idx) => ({
+          ch: ep.ch || `CH 0${idx + 1}`,
+          osd: `📺 ${ep.ch || 'CH 0' + (idx + 1)} · ${ep.title.toUpperCase().slice(0, 18)}`,
+          title: ep.title,
+          desc: ep.desc,
+          filter: idx === 0 ? 'saturate(1.3) hue-rotate(0deg)' : idx === 1 ? 'saturate(1.6) hue-rotate(110deg)' : 'saturate(1.5) hue-rotate(240deg)'
+        }));
+      }
+    })
+    .catch(() => {});
+})();

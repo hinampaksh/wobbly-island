@@ -3,569 +3,485 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <!-- Direct Self-Hosted Latin Variable Font Preload (First-Byte Priority in <head>) -->
+  <!-- First-Byte Dual-Font Preloads (Zero-Swap Frame 1 Paint) -->
+  <link rel="preload" href="assets/fonts/fredoka.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="assets/fonts/plus-jakarta-sans.woff2" as="font" type="font/woff2" crossorigin>
-  <title>Cebu Tech Masters | Fast Device Repairs</title>
-  <meta name="description" content="Fast, certified device repairs in Cebu for iPhones, Androids, MacBooks, and Laptops. Same-day service with guaranteed 90-day warranty.">
-  <link rel="canonical" href="https://bot-va-test.pages.dev/">
-
-  <!-- OpenGraph & Social Media Meta Cards -->
-  <meta property="og:type" content="business.business">
-  <meta property="og:title" content="Cebu Tech Masters | Fast Device Repairs">
-  <meta property="og:description" content="Fast, certified device repairs in Cebu for iPhones, Androids, MacBooks, and Laptops. 90-day warranty.">
-  <meta property="og:url" content="https://bot-va-test.pages.dev/">
-  <meta property="og:image" content="https://agency-content-router.alfiezafra.workers.dev/cebu-tech-masters/assets/hero-device.webp">
-  <meta name="twitter:card" content="summary_large_image">
-
-  <!-- Automated Google LocalBusiness Structured Data (JSON-LD) -->
-  <script type="application/ld+json" id="schema-local-business">
-  {
-    "@context": "https://schema.org",
-    "@type": "LocalBusiness",
-    "name": "Cebu Tech Masters",
-    "image": "https://agency-content-router.alfiezafra.workers.dev/cebu-tech-masters/assets/hero-device.webp",
-    "telephone": "+63 2 9999 8888",
-    "email": "repairs@cebutechmasters.ph",
-    "priceRange": "₱₱",
-    "address": {
-      "@type": "PostalAddress",
-      "streetAddress": "452 Taft Avenue, Ermita",
-      "addressLocality": "Cebu City",
-      "addressRegion": "Cebu",
-      "postalCode": "6000",
-      "addressCountry": "PH"
-    },
-    "geo": {
-      "@type": "GeoCoordinates",
-      "latitude": 10.3157,
-      "longitude": 123.8854
-    },
-    "openingHoursSpecification": [
-      {
-        "@type": "OpeningHoursSpecification",
-        "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
-        "opens": "09:00",
-        "closes": "19:00"
-      },
-      {
-        "@type": "OpeningHoursSpecification",
-        "dayOfWeek": "Saturday",
-        "opens": "08:00",
-        "closes": "18:00"
-      }
-    ],
-    "currenciesAccepted": "PHP",
-    "paymentAccepted": "Cash, GCash, Maya, Credit Card"
-  }
-  </script>
-
+  <title>Wobbly Island · Where Gravity Takes a Bellyflop! (Interactive Cartoon World)</title>
+  <meta name="description" content="Set sail with Captain Pip, Barnaby the Toaster-Bear, and Professor Squish across Wobbly Island! A heavily animated horizontal cartoon storybook engineered with 0.000 CLS.">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><circle cx='50' cy='50' r='45' fill='%23FFD41F' stroke='%231A142D' stroke-width='8'/><circle cx='35' cy='42' r='7' fill='%231A142D'/><circle cx='65' cy='42' r='7' fill='%231A142D'/><path d='M32 62 Q50 78 68 62' fill='none' stroke='%231A142D' stroke-width='7' stroke-linecap='round'/></svg>">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-  <!-- @component:header -->
-<!-- Site Navigation -->
-  <header class="site-header" id="site-header" data-section="nav" data-content-key="brand">
-    <div class="container nav-container">
-      <a href="#" class="brand-logo hover-spin">
-        <svg class="icon icon-sm" viewBox="0 0 24 24"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon></svg>
-        <span class="brand-name">Cebu Tech Masters</span>
-      </a>
-      <ul class="nav-links desktop-only">
-        <li><a href="#services" class="nav-anim-center ">Services</a></li>
-        <li><a href="#why-us" class="nav-anim-slide ">Why Us</a></li>
-        <li><a href="#quote" class="nav-anim-pill ">Get Estimate</a></li>
-        <li><a href="#faq" class="nav-anim-lift ">FAQ</a></li>
-        <li><a href="#contact" class="nav-anim-dot ">Contact</a></li>
-      </ul>
-      <div class="nav-actions">
-        <a href="#quote-modal" class="btn btn-primary desktop-only" id="nav-cta" data-open-modal="quote-modal">Book a Repair</a>
-        <!-- Popover Mobile Toggle Button (Zero JS) -->
-        <button class="menu-toggle mobile-only" popovertarget="site-mobile-menu" aria-label="Open Navigation Menu">
-          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
-            <line x1="3" y1="6" x2="21" y2="6"></line>
-            <line x1="3" y1="12" x2="21" y2="12"></line>
-            <line x1="3" y1="18" x2="21" y2="18"></line>
-          </svg>
-        </button>
-      </div>
+  <!-- ============================================================================
+       FLOATING CARTOON HUD & INTERACTIVE MINI-MAP WAYPOINTS
+       ============================================================================ -->
+  <header class="top-hud" id="top-hud" data-section="nav">
+    <a href="#zone-1-dock" class="hud-brand" onclick="jumpToZone(0); return false;">
+      <span class="brand-badge-icon" aria-hidden="true">
+        <svg width="26" height="26" viewBox="0 0 40 40" fill="none">
+          <circle cx="20" cy="20" r="16" fill="#FF542E" stroke="#1A142D" stroke-width="3.5"/>
+          <circle cx="15" cy="17" r="3" fill="#FFF"/>
+          <circle cx="25" cy="17" r="3" fill="#FFF"/>
+          <path d="M14 25 Q20 31 26 25" stroke="#FFF" stroke-width="3" stroke-linecap="round"/>
+        </svg>
+      </span>
+      <span id="nav-brand-text">Wobbly Island</span>
+    </a>
+
+    <!-- Horizontal Expedition Waypoints -->
+    <nav class="hud-map-nav" aria-label="Island Expedition Map">
+      <button class="map-waypoint active" data-zone="0" onclick="jumpToZone(0)">1. Launchpad</button>
+      <button class="map-waypoint" data-zone="1" onclick="jumpToZone(1)">2. The Crew</button>
+      <button class="map-waypoint" data-zone="2" onclick="jumpToZone(2)">3. Toon-TV</button>
+      <button class="map-waypoint" data-zone="3" onclick="jumpToZone(3)">4. Giggle-Lab</button>
+      <button class="map-waypoint" data-zone="4" onclick="jumpToZone(4)">5. Passport</button>
+    </nav>
+
+    <div class="hud-actions">
+      <button class="btn-toon-pill btn-sfx-toggle" id="sfx-btn" onclick="playToonSound('boing')">
+        <span>🔊</span> <span id="sfx-label">Boing!</span>
+      </button>
+      <button class="btn-toon-pill btn-passport-hud" id="hud-cta-btn" onclick="jumpToZone(4)">
+        Passport Stamp
+      </button>
     </div>
   </header>
 
-  <!-- Universal Popover Mobile Navigation (Native Top Layer, Light Dismiss, Zero JS) -->
-  <nav id="site-mobile-menu" popover class="el-mobile-menu" aria-label="Mobile Navigation Menu">
-    <div class="el-menu-header">
-      <span class="brand-name" style="font-weight: 700;">MENU</span>
-      <button class="el-menu-close" popovertarget="site-mobile-menu" popovertargetaction="hide" aria-label="Close Navigation">
-        ✕
-      </button>
-    </div>
-    <ul class="el-menu-links">
-      <li><a href="#services" popovertarget="site-mobile-menu" popovertargetaction="hide">Services</a></li>
-      <li><a href="#why-us" popovertarget="site-mobile-menu" popovertargetaction="hide">Why Us</a></li>
-      <li><a href="#quote" popovertarget="site-mobile-menu" popovertargetaction="hide">Get Estimate</a></li>
-      <li><a href="#faq" popovertarget="site-mobile-menu" popovertargetaction="hide">FAQ</a></li>
-      <li><a href="#contact" popovertarget="site-mobile-menu" popovertargetaction="hide">Contact</a></li>
-    </ul>
-    <div class="el-menu-footer">
-      <a href="#quote-modal" class="btn btn-primary" popovertarget="site-mobile-menu" popovertargetaction="hide" style="width: 100%; justify-content: center;">
-        Book a Repair
-      </a>
-    </div>
-  </nav>
-<!-- /@component:header -->
+  <!-- ============================================================================
+       VELOCITY-REACTIVE HERO SUBMARINE (Pitches & Tilts as You Scroll)
+       ============================================================================ -->
+  <div class="submarine-guide" id="sub-vessel" onclick="triggerSubmarineHorn()" title="Click to Honk the Yellow Toaster-Sub!">
+    <div class="sub-speech-tag" id="sub-bubble">AHOY! SCROLL TO SAIL! 🎺</div>
+    <svg viewBox="0 0 160 120" width="100%" height="100%" fill="none">
+      <!-- Periscope -->
+      <path d="M78 30 V12 H98" stroke="#1A142D" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+      <circle cx="102" cy="12" r="7" fill="#00D67F" stroke="#1A142D" stroke-width="4"/>
+      <!-- Rear Propeller (Spins via JS scroll) -->
+      <g id="sub-propeller" style="transform-origin: 18px 68px;">
+        <ellipse cx="18" cy="54" rx="6" ry="13" fill="#FF542E" stroke="#1A142D" stroke-width="3.5"/>
+        <ellipse cx="18" cy="82" rx="6" ry="13" fill="#FF542E" stroke="#1A142D" stroke-width="3.5"/>
+      </g>
+      <!-- Hull -->
+      <rect x="24" y="34" width="116" height="66" rx="33" fill="#FFD41F" stroke="#1A142D" stroke-width="5"/>
+      <!-- Porthole Windows -->
+      <circle cx="62" cy="67" r="15" fill="#7FE3FF" stroke="#1A142D" stroke-width="4.5"/>
+      <circle cx="58" cy="63" r="4" fill="#FFFFFF"/>
+      <circle cx="104" cy="67" r="15" fill="#7FE3FF" stroke="#1A142D" stroke-width="4.5"/>
+      <!-- Cute Smile on Nose -->
+      <path d="M124 72 Q132 80 137 70" stroke="#1A142D" stroke-width="4" stroke-linecap="round"/>
+    </svg>
+  </div>
 
-  <main>
-    <!-- Hero Section -->
-    <section class="hero-section" id="hero-section" data-section="hero" data-content-key="hero">
-      <div class="container">
-        <span class="badge hover-bounce" id="hero-badge" style="cursor: default;">
-          <svg class="icon icon-sm" viewBox="0 0 24 24"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon></svg>
-          <span>Same-Day Repairs in Under 1 Hour</span>
-        </span>
-        <h1 class="hero-headline" id="hero-headline">Fast, Reliable Device Repairs</h1>
-        <p class="hero-subheadline" id="hero-subheadline">We fix iPhones, Androids, MacBooks, and Laptops with certified parts and a comprehensive 90-day warranty.</p>
-        <div class="hero-ctas">
-          <a href="#quote-modal" class="btn btn-primary" id="hero-primary-cta" data-open-modal="quote-modal">Get Free Estimate</a>
-          <a href="#services" class="btn btn-outline" id="hero-secondary-cta">View Services</a>
+  <!-- ============================================================================
+       6-LAYER KINETIC HORIZONTAL STAGE
+       ============================================================================ -->
+  <div class="scroll-runway-driver" id="runway-driver">
+    <div class="camera-viewport">
+
+      <!-- LAYER 1: CELESTIAL SKY, SPINNING SUN & RAINBOW ARCH (0.15x Speed) -->
+      <div class="layer-sky" id="layer-sky">
+        <!-- Spinning Smiling Sun -->
+        <div class="cartoon-sun" id="spinning-sun" onclick="playToonSound('whistle')">
+          <svg viewBox="0 0 160 160" width="100%" height="100%">
+            <g stroke="#1A142D" stroke-width="4.5" stroke-linecap="round">
+              <line x1="80" y1="6" x2="80" y2="24"/>
+              <line x1="80" y1="136" x2="80" y2="154"/>
+              <line x1="6" y1="80" x2="24" y2="80"/>
+              <line x1="136" y1="80" x2="154" y2="80"/>
+              <line x1="26" y1="26" x2="40" y2="40"/>
+              <line x1="120" y1="120" x2="134" y2="134"/>
+              <line x1="134" y1="26" x2="120" y2="40"/>
+              <line x1="40" y1="120" x2="26" y2="134"/>
+            </g>
+            <circle cx="80" cy="80" r="46" fill="#FFD41F" stroke="#1A142D" stroke-width="5"/>
+            <circle cx="65" cy="72" r="5.5" fill="#1A142D"/>
+            <circle cx="95" cy="72" r="5.5" fill="#1A142D"/>
+            <circle cx="56" cy="82" r="6" fill="#FF542E" opacity="0.6"/>
+            <circle cx="104" cy="82" r="6" fill="#FF542E" opacity="0.6"/>
+            <path d="M64 88 Q80 103 96 88" fill="none" stroke="#1A142D" stroke-width="5" stroke-linecap="round"/>
+          </svg>
         </div>
 
-        <!-- Hero Showcase Image (Zero-CLS Pre-rendered) -->
-        <div class="hero-image-wrap">
-          <img id="hero-img" src="assets/hero-device.webp" alt="MacBook and laptop diagnostics workstation" width="1200" height="658" loading="eager" fetchpriority="high">
-        </div>
+        <!-- Giant Cartoon Rainbow Arch -->
+        <svg class="sky-rainbow-svg" viewBox="0 0 580 300" fill="none">
+          <path d="M30 300 A260 260 0 0 1 550 300" stroke="#FF542E" stroke-width="26"/>
+          <path d="M56 300 A234 234 0 0 1 524 300" stroke="#FFD41F" stroke-width="26"/>
+          <path d="M82 300 A208 208 0 0 1 498 300" stroke="#00D67F" stroke-width="26"/>
+          <path d="M108 300 A182 182 0 0 1 472 300" stroke="#7B3FE4" stroke-width="26"/>
+        </svg>
 
-        <!-- Key Stats (Pre-hydrated static elements to prevent CLS) -->
-        <div class="stats-grid" id="stats-grid" data-section="stats" data-content-key="stats">
-          <div class="stat-card hover-lift">
-            <div class="stat-value">15,000+</div>
-            <div class="stat-label">Devices Repaired</div>
-          </div>
-          <div class="stat-card hover-lift">
-            <div class="stat-value">45 Mins</div>
-            <div class="stat-label">Average Turnaround</div>
-          </div>
-          <div class="stat-card hover-lift">
-            <div class="stat-value">90 Days</div>
-            <div class="stat-label">Warranty Guaranteed</div>
-          </div>
-          <div class="stat-card hover-lift">
-            <div class="stat-value">4.9 ★</div>
-            <div class="stat-label">Customer Rating</div>
-          </div>
-        </div>
+        <!-- Floating Marshmallow Blimp -->
+        <svg class="sky-blimp" viewBox="0 0 220 120" fill="none">
+          <ellipse cx="110" cy="55" rx="85" ry="42" fill="#FF499E" stroke="#1A142D" stroke-width="4.5"/>
+          <path d="M45 55 H175" stroke="#FFD41F" stroke-width="8" stroke-linecap="round"/>
+          <rect x="85" y="94" width="50" height="18" rx="6" fill="#FFFFFF" stroke="#1A142D" stroke-width="3.5"/>
+        </svg>
       </div>
-    </section>
 
-    <!-- Services Section -->
-    <section class="section" id="services" data-section="services" data-content-key="services">
-      <div class="container">
-        <div class="section-header">
-          <h2 class="section-title">Our Repair Services</h2>
-          <p class="section-subtitle">Expert hardware diagnostics and component replacements backed by guaranteed warranty.</p>
-        </div>
-        <div class="services-grid" id="services-grid">
-          <div class="service-card hover-lift" id="phone-repair">
-            <img class="service-card-img" src="assets/mobile-thumb.webp" alt="Smartphone diagnostic desk" width="1000" height="666" loading="lazy">
-            <div class="service-icon">
-              <svg class="icon icon-lg" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
-            </div>
-            <h3 class="service-title">iPhone & Android Repair</h3>
-            <p class="service-description">Screen replacement, OEM battery upgrade, camera sensor fixes, and water damage recovery.</p>
-            <div class="service-meta">
-              <span class="service-price">₱1,200</span>
-              <span class="service-turnaround">30-45 mins</span>
-            </div>
-          </div>
-          <div class="service-card hover-lift" id="laptop-repair">
-            <img class="service-card-img" src="assets/diagnostics-thumb.webp" alt="MacBook keyboard and logic diagnostics" width="1000" height="666" loading="lazy">
-            <div class="service-icon">
-              <svg class="icon icon-lg" viewBox="0 0 24 24"><path d="M20 16V7a2 2 0 0 0-2-2H6a2 2 0 0 0-2 2v9m16 0H4m16 0 1.28 2.55A1 1 0 0 1 20.28 20H3.72a1 1 0 0 1-.89-1.45L4 16"></path></svg>
-            </div>
-            <h3 class="service-title">Laptop & MacBook Repair</h3>
-            <p class="service-description">Keyboard replacement, SSD upgrades, logic board diagnostics, and thermal servicing.</p>
-            <div class="service-meta">
-              <span class="service-price">₱2,500</span>
-              <span class="service-turnaround">1-2 hours</span>
-            </div>
-          </div>
-          <div class="service-card hover-lift" id="tablet-repair">
-            <div class="service-icon">
-              <svg class="icon icon-lg" viewBox="0 0 24 24"><rect width="16" height="20" x="4" y="2" rx="2" ry="2"></rect><line x1="12" x2="12.01" y1="18" y2="18"></line></svg>
-            </div>
-            <h3 class="service-title">iPad & Tablet Repair</h3>
-            <p class="service-description">Glass digitizer replacement, LCD repairs, charging port soldering, and battery health service.</p>
-            <div class="service-meta">
-              <span class="service-price">₱1,800</span>
-              <span class="service-turnaround">45-60 mins</span>
-            </div>
-          </div>
-          <div class="service-card hover-lift" id="data-recovery">
-            <div class="service-icon">
-              <svg class="icon icon-lg" viewBox="0 0 24 24"><ellipse cx="12" cy="5" rx="9" ry="3"></ellipse><path d="M3 5V19A9 3 0 0 0 21 19V5"></path><path d="M3 12A9 3 0 0 0 21 12"></path></svg>
-            </div>
-            <h3 class="service-title">Data Recovery & Diagnostics</h3>
-            <p class="service-description">Emergency data extraction from unbootable devices and corrupted drives with complete privacy.</p>
-            <div class="service-meta">
-              <span class="service-price">₱1,500</span>
-              <span class="service-turnaround">Same-day</span>
-            </div>
-          </div>
-        </div>
+      <!-- LAYER 2: PUFFY VECTOR CLOUDS WITH FACES (0.35x Speed) -->
+      <div class="layer-clouds" id="layer-clouds">
+        <svg class="puffy-cloud c-pos-1" viewBox="0 0 240 110">
+          <path d="M45 95 H195 A30 30 0 0 0 205 38 A42 42 0 0 0 125 18 A48 48 0 0 0 38 42 A28 28 0 0 0 45 95 Z" fill="#FFFFFF" stroke="#1A142D" stroke-width="4.5"/>
+          <circle cx="105" cy="58" r="4" fill="#1A142D"/><circle cx="135" cy="58" r="4" fill="#1A142D"/>
+          <path d="M112 68 Q120 75 128 68" fill="none" stroke="#1A142D" stroke-width="3.5" stroke-linecap="round"/>
+        </svg>
+        <svg class="puffy-cloud c-pos-2" viewBox="0 0 240 110">
+          <path d="M45 95 H195 A30 30 0 0 0 205 38 A42 42 0 0 0 125 18 A48 48 0 0 0 38 42 A28 28 0 0 0 45 95 Z" fill="#FFFFFF" stroke="#1A142D" stroke-width="4.5"/>
+          <circle cx="105" cy="58" r="4" fill="#1A142D"/><circle cx="135" cy="58" r="4" fill="#1A142D"/>
+          <path d="M112 68 Q120 75 128 68" fill="none" stroke="#1A142D" stroke-width="3.5" stroke-linecap="round"/>
+        </svg>
+        <svg class="puffy-cloud c-pos-3" viewBox="0 0 240 110">
+          <path d="M45 95 H195 A30 30 0 0 0 205 38 A42 42 0 0 0 125 18 A48 48 0 0 0 38 42 A28 28 0 0 0 45 95 Z" fill="#FFFFFF" stroke="#1A142D" stroke-width="4.5"/>
+        </svg>
+        <svg class="puffy-cloud c-pos-4" viewBox="0 0 240 110">
+          <path d="M45 95 H195 A30 30 0 0 0 205 38 A42 42 0 0 0 125 18 A48 48 0 0 0 38 42 A28 28 0 0 0 45 95 Z" fill="#FFFFFF" stroke="#1A142D" stroke-width="4.5"/>
+        </svg>
+        <svg class="puffy-cloud c-pos-5" viewBox="0 0 240 110">
+          <path d="M45 95 H195 A30 30 0 0 0 205 38 A42 42 0 0 0 125 18 A48 48 0 0 0 38 42 A28 28 0 0 0 45 95 Z" fill="#FFFFFF" stroke="#1A142D" stroke-width="4.5"/>
+        </svg>
+        <svg class="puffy-cloud c-pos-6" viewBox="0 0 240 110">
+          <path d="M45 95 H195 A30 30 0 0 0 205 38 A42 42 0 0 0 125 18 A48 48 0 0 0 38 42 A28 28 0 0 0 45 95 Z" fill="#FFFFFF" stroke="#1A142D" stroke-width="4.5"/>
+        </svg>
       </div>
-    </section>
 
-    <!-- Instant Quote Lead Form Section -->
-    <section class="section" id="quote" data-section="quote_form" data-content-key="quote_form" style="background-color: #f3f4f6;">
-      <div class="container">
-        <div class="form-grid">
-          <div>
-            <span class="badge" id="quote-badge">Instant Estimate</span>
-            <h2 class="section-title" id="quote-headline" style="text-align: left; margin-top: 10px;">Request a Free Repair Quote</h2>
-            <p class="section-subtitle" id="quote-subheadline" style="text-align: left; margin-left: 0; margin-bottom: 24px;">Tell us about your device issue and our certified technicians will provide an upfront price in minutes.</p>
-            <ul style="list-style: none; display: flex; flex-direction: column; gap: 14px; color: var(--text-muted); font-size: 0.95rem;">
-              <li style="display: flex; align-items: center; gap: 10px;">
-                <svg class="icon icon-sm" style="color: var(--primary);" viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
-                90-Day Parts & Labor Warranty Included
-              </li>
-              <li style="display: flex; align-items: center; gap: 10px;">
-                <svg class="icon icon-sm" style="color: var(--primary);" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
-                Most Screen & Battery Replacements Under 45 Mins
-              </li>
-              <li style="display: flex; align-items: center; gap: 10px;">
-                <svg class="icon icon-sm" style="color: var(--primary);" viewBox="0 0 24 24"><path d="m9 12 2 2 4-4"></path><circle cx="12" cy="12" r="10"></circle></svg>
-                100% Free Diagnostics — No Obligation
-              </li>
-            </ul>
-            <div class="quote-image-wrap">
-              <img id="quote-img" src="assets/workspace-thumb.webp" alt="Clean organized electronic repair desk" width="1000" height="666" loading="lazy">
+      <!-- LAYER 3: SINGING CANDY HILLS & JELLY VOLCANOES (0.55x Speed) -->
+      <div class="layer-mountains" id="layer-mountains">
+        <svg class="mountain-range-svg" viewBox="0 0 2400 360" preserveAspectRatio="none">
+          <!-- Back Grape Hills -->
+          <path d="M0 360 Q220 80 480 360 T980 360 T1520 360 T2050 360 T2400 360 Z" fill="#B589FF" stroke="#1A142D" stroke-width="5"/>
+          <!-- Front Mint & Lime Rolling Hills -->
+          <path d="M-80 360 Q180 120 420 360 Q720 90 1020 360 Q1340 110 1660 360 Q1980 80 2320 360 Z" fill="#00D67F" stroke="#1A142D" stroke-width="5"/>
+        </svg>
+      </div>
+
+      <!-- ==========================================================================
+           LAYER 4: MAIN HORIZONTAL STORYBOOK TRACK (1.0x Speed — 5 Interactive Zones)
+           ========================================================================== -->
+      <main class="layer-world-track" id="world-track">
+
+        <!-- ZONE 1: WELCOME LAUNCHPAD -->
+        <section class="world-zone zone-dock" id="zone-1-dock" data-section="hero">
+          <div class="hero-comic-panel">
+            <div class="comic-burst-badge" id="hero-badge">
+              <span>⭐</span> NEW EPISODES EVERY SATURDAY MORNING!
+            </div>
+            <h1 class="hero-display-title" id="hero-title">
+              Where Gravity Takes a <span class="highlight-word">Bellyflop!</span>
+            </h1>
+            <p class="hero-lead-copy" id="hero-subtitle">
+              Set sail with Captain Pip, Barnaby the Toaster-Bear, and Professor Squish across an island made of 100% wobbly jelly, singing volcanoes, and flying marshmallow submarines.
+            </p>
+            <div class="hero-cta-cluster">
+              <button class="btn-mega-toon btn-mega-primary" id="hero-cta-primary" onclick="jumpToZone(1)">
+                <span>🚀</span> Start the Expedition
+              </button>
+              <button class="btn-mega-toon btn-mega-secondary" id="hero-cta-secondary" onclick="triggerSubmarineHorn()">
+                <span>🎺</span> Honk the Foghorn
+              </button>
             </div>
           </div>
-          <div class="quote-card">
-            <form id="quote-form">
-              <div class="form-row">
-                <div class="form-group">
-                  <label class="form-label" for="device-type">Device Type</label>
-                  <select class="form-control" id="device-type" required>
-                    <option value="">Select device...</option>
-                    <option value="iPhone">Apple iPhone</option>
-                    <option value="Android">Samsung / Android</option>
-                    <option value="MacBook">MacBook / Mac</option>
-                    <option value="Laptop">Windows Laptop</option>
-                    <option value="iPad">iPad / Tablet</option>
-                  </select>
+
+          <!-- Custom Vector Totem Mascot Stack -->
+          <div class="hero-mascot-stage">
+            <div class="totem-svg-wrap" onclick="playToonSound('boing')" title="Boing the Island Totem!">
+              <svg viewBox="0 0 260 310" width="100%" height="100%" fill="none">
+                <!-- Palm Crown -->
+                <path d="M130 55 Q70 10 35 55 Q85 50 130 55 Z" fill="#00D67F" stroke="#1A142D" stroke-width="4.5"/>
+                <path d="M130 55 Q190 10 225 55 Q175 50 130 55 Z" fill="#00D67F" stroke="#1A142D" stroke-width="4.5"/>
+                <!-- Top Bunny Head (Pip) -->
+                <rect x="65" y="52" width="130" height="105" rx="48" fill="#FF499E" stroke="#1A142D" stroke-width="5"/>
+                <circle cx="130" cy="96" r="24" fill="#FFFFFF" stroke="#1A142D" stroke-width="4.5"/>
+                <circle cx="130" cy="96" r="10" fill="#1A142D"/>
+                <circle cx="134" cy="92" r="3.5" fill="#FFFFFF"/>
+                <path d="M110 132 Q130 146 150 132" stroke="#1A142D" stroke-width="4.5" stroke-linecap="round"/>
+                <!-- Bottom Jelly Volcano Base -->
+                <path d="M40 295 L68 155 H192 L220 295 Z" fill="#FF542E" stroke="#1A142D" stroke-width="5" stroke-linejoin="round"/>
+                <!-- Cream Lava Drip -->
+                <path d="M68 155 Q95 190 115 168 Q135 195 155 168 Q175 190 192 155 Z" fill="#FFD41F" stroke="#1A142D" stroke-width="4.5"/>
+                <circle cx="105" cy="225" r="7" fill="#1A142D"/>
+                <circle cx="155" cy="225" r="7" fill="#1A142D"/>
+                <path d="M115 250 Q130 268 145 250" stroke="#FFFFFF" stroke-width="5" stroke-linecap="round"/>
+              </svg>
+            </div>
+            <div class="scroll-nudge-banner">
+              <span>👉</span> Scroll or Swipe to Sail East!
+            </div>
+          </div>
+        </section>
+
+        <!-- ZONE 2: MEET THE EXPEDITION CREW (Static Pre-Hydrated 3-Card Cast Grid) -->
+        <section class="world-zone zone-cast" id="zone-2-cast" data-section="cast">
+          <div class="zone-header-row">
+            <div>
+              <span class="zone-pill-tag" id="cast-eyebrow">MEET THE EXPEDITION CREW</span>
+              <h2 class="zone-title" id="cast-title">Click Any Wobbler to Boing!</h2>
+            </div>
+          </div>
+
+          <div class="cast-cards-grid" id="cast-grid">
+            <!-- Card 1: Captain Pip -->
+            <article class="wobbler-card" onclick="boingCharacterCard(this, 'boing')">
+              <div class="char-speech-pop">"Sproing-a-ding-dong! Full bounce ahead!"</div>
+              <div class="char-svg-stage stage-pip">
+                <svg viewBox="0 0 120 120" width="110" height="110">
+                  <!-- Bunny Ears -->
+                  <ellipse cx="42" cy="26" rx="12" ry="26" transform="rotate(-12 42 26)" fill="#FF499E" stroke="#1A142D" stroke-width="4"/>
+                  <ellipse cx="78" cy="26" rx="12" ry="26" transform="rotate(12 78 26)" fill="#FF499E" stroke="#1A142D" stroke-width="4"/>
+                  <!-- Head -->
+                  <circle cx="60" cy="70" r="36" fill="#FF499E" stroke="#1A142D" stroke-width="4.5"/>
+                  <!-- Giant Cyclops Eye -->
+                  <circle cx="60" cy="64" r="16" fill="#FFFFFF" stroke="#1A142D" stroke-width="4"/>
+                  <circle cx="60" cy="64" r="7" fill="#1A142D"/>
+                  <circle cx="63" cy="61" r="2.5" fill="#FFFFFF"/>
+                  <!-- Goofy Smile & Tooth -->
+                  <path d="M45 86 Q60 98 75 86" fill="none" stroke="#1A142D" stroke-width="4" stroke-linecap="round"/>
+                  <rect x="56" y="88" width="8" height="7" rx="2" fill="#FFFFFF" stroke="#1A142D" stroke-width="2.5"/>
+                </svg>
+              </div>
+              <h3 class="char-name-heading">Captain Pip</h3>
+              <div class="char-role-tag">Chief Cloud Bouncer</div>
+              <p class="char-desc-text">A cyclops bunny with spring-loaded ears capable of vaulting over Mount Fizzy-Pop in a single bound.</p>
+              <div class="char-power-meter">
+                <span>EAR ELASTICITY</span>
+                <span class="power-val">9,999%</span>
+              </div>
+            </article>
+
+            <!-- Card 2: Barnaby -->
+            <article class="wobbler-card" onclick="boingCharacterCard(this, 'honk')">
+              <div class="char-speech-pop">"Hold onto your marmalade, we're going supersonic!"</div>
+              <div class="char-svg-stage stage-barnaby">
+                <svg viewBox="0 0 120 120" width="110" height="110">
+                  <!-- Chrome Toaster Body -->
+                  <rect x="26" y="42" width="68" height="56" rx="14" fill="#FFFFFF" stroke="#1A142D" stroke-width="4.5"/>
+                  <!-- Toast Bear Ears Popping Out Top -->
+                  <circle cx="42" cy="36" r="14" fill="#FF9F1C" stroke="#1A142D" stroke-width="4"/>
+                  <circle cx="78" cy="36" r="14" fill="#FF9F1C" stroke="#1A142D" stroke-width="4"/>
+                  <!-- Aviator Goggles -->
+                  <rect x="34" y="54" width="22" height="16" rx="6" fill="#00D67F" stroke="#1A142D" stroke-width="3.5"/>
+                  <rect x="64" y="54" width="22" height="16" rx="6" fill="#00D67F" stroke="#1A142D" stroke-width="3.5"/>
+                  <!-- Bear Snout -->
+                  <ellipse cx="60" cy="80" rx="14" ry="10" fill="#FFD41F" stroke="#1A142D" stroke-width="3.5"/>
+                  <circle cx="60" cy="77" r="4" fill="#1A142D"/>
+                </svg>
+              </div>
+              <h3 class="char-name-heading">Barnaby</h3>
+              <div class="char-role-tag">Flying Toaster-Bear</div>
+              <p class="char-desc-text">Half grizzly bear, half two-slice chrome toaster. Powered by warm cinnamon-sugar propulsion.</p>
+              <div class="char-power-meter">
+                <span>CRUMB THRUST</span>
+                <span class="power-val">MACH 4</span>
+              </div>
+            </article>
+
+            <!-- Card 3: Professor Squish -->
+            <article class="wobbler-card" onclick="boingCharacterCard(this, 'bubble')">
+              <div class="char-speech-pop">"According to my calculations... BLUB-BLUB-SPLOOSH!"</div>
+              <div class="char-svg-stage stage-squish">
+                <svg viewBox="0 0 120 120" width="110" height="110">
+                  <!-- Jelly Dome Body -->
+                  <path d="M28 88 C28 40 92 40 92 88 Z" fill="#7B3FE4" stroke="#1A142D" stroke-width="4.5"/>
+                  <!-- Wavy Tentacles -->
+                  <path d="M28 88 Q40 102 50 88 Q60 102 70 88 Q82 102 92 88" fill="#7B3FE4" stroke="#1A142D" stroke-width="4.5" stroke-linecap="round"/>
+                  <!-- Monocle & Eyes -->
+                  <circle cx="48" cy="64" r="6" fill="#FFFFFF" stroke="#1A142D" stroke-width="3.5"/>
+                  <circle cx="72" cy="64" r="10" fill="#00CCF5" stroke="#FFD41F" stroke-width="4"/>
+                  <circle cx="48" cy="64" r="2.5" fill="#1A142D"/>
+                  <circle cx="72" cy="64" r="3.5" fill="#1A142D"/>
+                  <!-- Mustache -->
+                  <path d="M44 78 Q60 70 76 78" fill="none" stroke="#FFD41F" stroke-width="5" stroke-linecap="round"/>
+                </svg>
+              </div>
+              <h3 class="char-name-heading">Prof. Squish</h3>
+              <div class="char-role-tag">Jelly Volcanologist</div>
+              <p class="char-desc-text">A 400-IQ gelatinous octopus who predicts soda eruptions using a golden monocle and a tuba.</p>
+              <div class="char-power-meter">
+                <span>WOBBLE IQ</span>
+                <span class="power-val">400 JIGGLES</span>
+              </div>
+            </article>
+          </div>
+        </section>
+
+        <!-- ZONE 3: WOBBLE-VISION RETRO TOON TV (Zero-CLS 16:9 Screen + Channel Flipper) -->
+        <section class="world-zone zone-theater" id="zone-3-theater" data-section="theater">
+          <div class="zone-header-row">
+            <div>
+              <span class="zone-pill-tag" id="theater-eyebrow" style="background:var(--bs-accent-1);">WOBBLE-VISION BROADCAST</span>
+              <h2 class="zone-title" id="theater-title">Saturday Morning Toon-O-Rama</h2>
+            </div>
+          </div>
+
+          <div class="toon-tv-cabinet">
+            <!-- Rabbit-Ear Antenna SVG -->
+            <svg class="tv-rabbit-ears" viewBox="0 0 140 56" fill="none">
+              <line x1="70" y1="52" x2="22" y2="10" stroke="#1A142D" stroke-width="5" stroke-linecap="round"/>
+              <line x1="70" y1="52" x2="118" y2="10" stroke="#1A142D" stroke-width="5" stroke-linecap="round"/>
+              <circle cx="22" cy="10" r="8" fill="#FF542E" stroke="#1A142D" stroke-width="3.5"/>
+              <circle cx="118" cy="10" r="8" fill="#FFD41F" stroke="#1A142D" stroke-width="3.5"/>
+              <path d="M50 56 A20 20 0 0 1 90 56 Z" fill="#1A142D"/>
+            </svg>
+
+            <!-- Zero-CLS 16:9 Video Embed Screen -->
+            <div class="bs-video-embed">
+              <div class="tv-osd-badge" id="tv-osd-label">📺 CH 01 · MARMALADE GEYSER</div>
+              <video id="toon-tv-video" autoplay loop muted playsinline poster="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='100%' height='100%' fill='%23120E24'></svg>">
+                <source src="assets/videos/ambient-hero.mp4" type="video/mp4">
+              </video>
+              <div class="tv-cartoon-hud">● LIVE SATELLITE FEED</div>
+            </div>
+
+            <!-- Interactive Channel Selector Deck -->
+            <div class="tv-control-deck">
+              <div>
+                <div class="channel-buttons-row">
+                  <button class="ch-btn active" onclick="switchToonChannel(0, this)">CH 01</button>
+                  <button class="ch-btn" onclick="switchToonChannel(1, this)">CH 02</button>
+                  <button class="ch-btn" onclick="switchToonChannel(2, this)">CH 03</button>
                 </div>
-                <div class="form-group">
-                  <label class="form-label" for="repair-service">Issue / Repair</label>
-                  <select class="form-control" id="repair-service" required>
-                    <option value="">Select issue...</option>
-                    <option value="Screen Replacement">Cracked Screen</option>
-                    <option value="Battery Replacement">Dead / Draining Battery</option>
-                    <option value="Charging Port">Won't Charge</option>
-                    <option value="Water Damage">Water / Liquid Damage</option>
-                    <option value="Data Recovery">Data Recovery</option>
-                    <option value="Other">Other Diagnostic</option>
-                  </select>
+                <div class="episode-info-box">
+                  <h3 class="ep-title" id="ep-title">The Great Marmalade Geyser</h3>
+                  <p class="ep-desc" id="ep-desc">
+                    Barnaby accidentally plugs his toaster backpack into Mount Fizzy-Pop, turning the entire lagoon into warm strawberry jam!
+                  </p>
                 </div>
               </div>
-              <div class="form-group">
-                <label class="form-label" for="full-name">Full Name</label>
-                <input type="text" class="form-control" id="full-name" placeholder="Juan Dela Cruz" required>
+
+              <div class="rotary-dial-row">
+                <div style="font-family:var(--bs-font-display); font-size:0.82rem; font-weight:700;">
+                  CLICK DIAL TO TUNE:
+                </div>
+                <button class="rotary-knob" id="tv-knob" onclick="cycleNextChannel()" aria-label="Rotate TV Channel Knob"></button>
               </div>
-              <div class="form-group">
-                <label class="form-label" for="contact-number">Mobile / WhatsApp Number</label>
-                <input type="tel" class="form-control" id="contact-number" placeholder="+63 917 000 0000" required>
+            </div>
+          </div>
+        </section>
+
+        <!-- ZONE 4: PROFESSOR SQUISH'S GIGGLE-O-TRON 3000 SOUNDBOARD -->
+        <section class="world-zone zone-factory" id="zone-4-factory" data-section="soundboard">
+          <div class="factory-console">
+            <span class="zone-pill-tag" id="soundboard-eyebrow" style="background:var(--bs-ink);">PROFESSOR SQUISH'S SOUND LAB</span>
+            <h2 class="zone-title" id="soundboard-title" style="margin-bottom:4px;">The Giggle-O-Tron 3000</h2>
+            <p id="soundboard-subtitle" style="font-size:0.92rem; font-weight:600; color:var(--bs-text-muted);">
+              Smash the squishy gummy pads below to synthesize real cartoon sound effects and launch fizzy soda geysers!
+            </p>
+
+            <!-- 6 Interactive Web-Audio Synthesizer Pads -->
+            <div class="soundboard-grid" id="soundboard-pads">
+              <button class="gummy-pad" onclick="triggerSoundPad(this, 'boing', '💥 SPROING! Elastic Ear Launch!', 65)">
+                <span class="pad-title">Mega Boing!</span>
+                <span class="pad-sub">Spring Coil</span>
+              </button>
+              <button class="gummy-pad" onclick="triggerSoundPad(this, 'honk', '🎺 HONK-HONK! Toaster Foghorn!', 80)">
+                <span class="pad-title">Toon Horn!</span>
+                <span class="pad-sub">Brass Honk</span>
+              </button>
+              <button class="gummy-pad" onclick="triggerSoundPad(this, 'whistle', '🎵 WHOOOOP! Cloud Slide Whistle!', 55)">
+                <span class="pad-title">Slide Whistle</span>
+                <span class="pad-sub">Whoop-Up!</span>
+              </button>
+              <button class="gummy-pad" onclick="triggerSoundPad(this, 'bubble', '🫧 BLUB-BLUB! Jelly Volcano Pop!', 90)">
+                <span class="pad-title">Slime Bubble</span>
+                <span class="pad-sub">Blub-Pop!</span>
+              </button>
+              <button class="gummy-pad" onclick="triggerSoundPad(this, 'zap', '⚡ PEW-PEW! Marshmallow Ray!', 75)">
+                <span class="pad-title">Laser Zap!</span>
+                <span class="pad-sub">Pew-Pew!</span>
+              </button>
+              <button class="gummy-pad" onclick="triggerSoundPad(this, 'party', '🎉 BOOM! Confetti Soda Eruption!', 100)">
+                <span class="pad-title">Party Cannon</span>
+                <span class="pad-sub">Confetti!</span>
+              </button>
+            </div>
+
+            <div class="factory-meter-bar">
+              <span class="meter-status-text" id="factory-readout">GIGGLE PRESSURE: READY TO BOING!</span>
+              <div class="fizz-level-track">
+                <div class="fizz-level-fill" id="fizz-bar"></div>
               </div>
-              <button type="submit" class="btn btn-primary btn-block" id="quote-submit-btn">Submit Quote Request</button>
-              <div class="form-feedback" id="quote-feedback"></div>
+            </div>
+          </div>
+        </section>
+
+        <!-- ZONE 5: GRAND FINALE PASSPORT STAMP BOOTH -->
+        <section class="world-zone zone-clubhouse" id="zone-5-clubhouse" data-section="club">
+          <div class="passport-card" id="passport-card">
+            <div class="official-stamp-seal" id="passport-seal">
+              <span>⭐ APPROVED ⭐</span>
+              <span>WOBBLER VIP</span>
+            </div>
+
+            <div class="comic-burst-badge" id="club-badge" style="background:var(--bs-accent-2);">
+              <span>🛂</span> OFFICIAL EXPLORER CITIZENSHIP
+            </div>
+            <h2 class="zone-title" id="club-title" style="margin-bottom:0.6rem;">
+              Get Your Official Wobbly Passport!
+            </h2>
+            <p class="hero-lead-copy" id="club-subtitle" style="margin-bottom:1rem;">
+              Stamp your ticket to unlock secret island maps, printable sticker packs, and the Saturday Morning Cartoon Club.
+            </p>
+
+            <form class="passport-name-row" onsubmit="event.preventDefault(); stampPassport();">
+              <input type="text" id="explorer-name" class="toon-input" placeholder="Type your Explorer Name..." maxlength="28" required>
+              <button type="submit" class="btn-mega-toon btn-mega-primary" id="club-cta-btn">
+                STAMP IT!
+              </button>
             </form>
-          </div>
-        </div>
-      </div>
-    </section>
 
-    <!-- Why Us Section -->
-    <section class="section" id="why-us" data-section="why us" data-content-key="why_us">
-      <div class="container">
-        <div class="section-header">
-          <h2 class="section-title">Why Customers Trust Us</h2>
-          <p class="section-subtitle">Delivering high standards in electronic repair with transparent turnaround.</p>
-        </div>
-        <div class="why-grid" id="why-grid">
-          <div class="why-card hover-lift">
-            <div class="why-icon">
-              <svg class="icon icon-lg" viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+            <div id="passport-confirmation" style="font-family:var(--bs-font-display); font-size:0.95rem; font-weight:700; color:var(--bs-accent-3); min-height:1.5em;">
+              Ready for official ink stamp...
             </div>
-            <h3 class="why-title">Certified OEM Parts</h3>
-            <p class="why-desc">We source high-grade components to make sure your device performs just like brand new.</p>
           </div>
-          <div class="why-card hover-lift">
-            <div class="why-icon">
-              <svg class="icon icon-lg" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
-            </div>
-            <h3 class="why-title">Under-an-Hour Fixes</h3>
-            <p class="why-desc">Most screen and battery replacements are completed while you wait in our lounge.</p>
-          </div>
-          <div class="why-card hover-lift">
-            <div class="why-icon">
-              <svg class="icon icon-lg" viewBox="0 0 24 24"><path d="M3.85 8.62a4 4 0 0 1 4.78-4.77 4 4 0 0 1 6.74 0 4 4 0 0 1 4.78 4.78 4 4 0 0 1 0 6.74 4 4 0 0 1-4.77 4.78 4 4 0 0 1-6.75 0 4 4 0 0 1-4.78-4.77 4 4 0 0 1 0-6.76Z"></path><path d="m9 12 2 2 4-4"></path></svg>
-            </div>
-            <h3 class="why-title">Upfront Honest Pricing</h3>
-            <p class="why-desc">Zero hidden diagnostic charges. You approve the quote before we touch a screw.</p>
-          </div>
-        </div>
-      </div>
-    </section>
+        </section>
 
-    <!-- Testimonials Slider Section -->
-    <section class="section" id="testimonials" data-section="testimonials" data-content-key="testimonials" style="background-color: #f3f4f6;">
-      <div class="container">
-        <div class="section-header">
-          <h2 class="section-title">What Our Clients Say</h2>
-          <p class="section-subtitle">Real feedback from verified customers whose devices were revived by our certified technicians.</p>
-        </div>
-        <div class="slider-container">
-          <button class="slider-btn slider-btn-prev" id="slider-prev" aria-label="Previous Reviews">
-            <svg class="icon icon-sm" viewBox="0 0 24 24"><polyline points="15 18 9 12 15 6"></polyline></svg>
-          </button>
-          <div class="slider-track" id="testimonials-slider">
-            <div class="slider-item">
-              <div class="testimonial-card">
-                <div class="testimonial-rating">★★★★★</div>
-                <p class="testimonial-quote">"Dropped my phone right before a business trip. Cebu Tech Masters had the screen replaced in 35 minutes flat!"</p>
-                <div class="testimonial-author">Mark S.</div>
-                <div class="testimonial-location">Makati City</div>
-              </div>
-            </div>
-            <div class="slider-item">
-              <div class="testimonial-card">
-                <div class="testimonial-rating">★★★★★</div>
-                <p class="testimonial-quote">"Replaced my MacBook battery while I had lunch nearby. Honest price and courteous service."</p>
-                <div class="testimonial-author">Patricia L.</div>
-                <div class="testimonial-location">BGC, Taguig</div>
-              </div>
-            </div>
-            <div class="slider-item">
-              <div class="testimonial-card">
-                <div class="testimonial-rating">★★★★★</div>
-                <p class="testimonial-quote">"Repaired an iPad water damaged during monsoon season. Completely restored all data and display!"</p>
-                <div class="testimonial-author">Jerome V.</div>
-                <div class="testimonial-location">Cebu IT Park</div>
-              </div>
-            </div>
-          </div>
-          <button class="slider-btn slider-btn-next" id="slider-next" aria-label="Next Reviews">
-            <svg class="icon icon-sm" viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"></polyline></svg>
-          </button>
-        </div>
-      </div>
-    </section>
+      </main>
 
-    <!-- FAQ Accordion Section -->
-    <section class="section" id="faq" data-section="faq" data-content-key="faq">
-      <div class="container">
-        <div class="section-header">
-          <h2 class="section-title">Frequently Asked Questions</h2>
-          <p class="section-subtitle">Everything you need to know about our turnaround times, parts warranty, and service process.</p>
-        </div>
-        <div class="faq-list" id="faq-list">
-          <details class="faq-item" open>
-            <summary class="faq-question">
-              <span>How long does a typical screen or battery repair take?</span>
-              <svg class="icon icon-sm faq-chevron" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"></polyline></svg>
-            </summary>
-            <div class="faq-answer-wrap">
-              <div class="faq-answer-inner">
-                <div class="faq-answer">
-                  Most phone screen and battery replacements take between 30 to 45 minutes. Laptops and complex logic board servicing generally take 1 to 2 hours.
-                </div>
-              </div>
-            </div>
-          </details>
-          <details class="faq-item">
-            <summary class="faq-question">
-              <span>Do you provide a warranty on repairs?</span>
-              <svg class="icon icon-sm faq-chevron" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"></polyline></svg>
-            </summary>
-            <div class="faq-answer-wrap">
-              <div class="faq-answer-inner">
-                <div class="faq-answer">
-                  Yes! Every hardware repair comes with our comprehensive 90-day parts and labor warranty.
-                </div>
-              </div>
-            </div>
-          </details>
-          <details class="faq-item">
-            <summary class="faq-question">
-              <span>Will my personal data remain safe during servicing?</span>
-              <svg class="icon icon-sm faq-chevron" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"></polyline></svg>
-            </summary>
-            <div class="faq-answer-wrap">
-              <div class="faq-answer-inner">
-                <div class="faq-answer">
-                  Absolutely. We adhere to strict customer data privacy protocols and do not require your device passcode unless diagnostics specifically demand testing.
-                </div>
-              </div>
-            </div>
-          </details>
-          <details class="faq-item">
-            <summary class="faq-question">
-              <span>Can I get a quote before committing to the repair?</span>
-              <svg class="icon icon-sm faq-chevron" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"></polyline></svg>
-            </summary>
-            <div class="faq-answer-wrap">
-              <div class="faq-answer-inner">
-                <div class="faq-answer">
-                  Yes. Our initial diagnostic quote is completely transparent and free. We only proceed once you approve the estimate.
-                </div>
-              </div>
-            </div>
-          </details>
-        </div>
+      <!-- LAYER 5: FOREGROUND BOUNCING MUSHROOMS & LOLLIPOP TREES (1.55x Speed) -->
+      <div class="layer-foreground-flora" id="layer-flora">
+        <!-- SVG Candy Lollipop 1 -->
+        <svg class="fg-flora-item" viewBox="0 0 100 100">
+          <line x1="50" y1="50" x2="50" y2="98" stroke="#1A142D" stroke-width="8" stroke-linecap="round"/>
+          <circle cx="50" cy="40" r="32" fill="#FF499E" stroke="#1A142D" stroke-width="5"/>
+          <path d="M32 40 A18 18 0 0 1 68 40 A9 9 0 0 1 50 40" fill="none" stroke="#FFFFFF" stroke-width="5" stroke-linecap="round"/>
+        </svg>
+        <!-- SVG Spotted Bouncy Mushroom -->
+        <svg class="fg-flora-item" viewBox="0 0 100 100">
+          <path d="M36 55 V94 H64 V55" fill="#FFFDF2" stroke="#1A142D" stroke-width="5"/>
+          <path d="M12 58 C12 14 88 14 88 58 Z" fill="#FF542E" stroke="#1A142D" stroke-width="5"/>
+          <circle cx="35" cy="38" r="7" fill="#FFD41F"/>
+          <circle cx="65" cy="42" r="9" fill="#FFD41F"/>
+        </svg>
+        <!-- SVG Star Flower -->
+        <svg class="fg-flora-item" viewBox="0 0 100 100">
+          <line x1="50" y1="55" x2="50" y2="98" stroke="#00D67F" stroke-width="8" stroke-linecap="round"/>
+          <circle cx="50" cy="42" r="28" fill="#FFD41F" stroke="#1A142D" stroke-width="5"/>
+          <circle cx="42" cy="38" r="4" fill="#1A142D"/><circle cx="58" cy="38" r="4" fill="#1A142D"/>
+          <path d="M42 48 Q50 56 58 48" fill="none" stroke="#1A142D" stroke-width="4" stroke-linecap="round"/>
+        </svg>
+        <!-- SVG Gummy Pine -->
+        <svg class="fg-flora-item" viewBox="0 0 100 100">
+          <polygon points="50,10 15,78 85,78" fill="#00D67F" stroke="#1A142D" stroke-width="5" stroke-linejoin="round"/>
+          <rect x="42" y="78" width="16" height="18" fill="#FF542E" stroke="#1A142D" stroke-width="4"/>
+        </svg>
+        <!-- SVG Swirl Candy -->
+        <svg class="fg-flora-item" viewBox="0 0 100 100">
+          <line x1="50" y1="50" x2="50" y2="98" stroke="#1A142D" stroke-width="8" stroke-linecap="round"/>
+          <circle cx="50" cy="40" r="32" fill="#7B3FE4" stroke="#1A142D" stroke-width="5"/>
+          <circle cx="50" cy="40" r="16" fill="#FFD41F" stroke="#1A142D" stroke-width="4"/>
+        </svg>
       </div>
-    </section>
 
-    <!-- Subscribe / Discount Strip -->
-    <section class="subscribe-section" id="subscribe" data-section="subscribe" data-content-key="subscribe">
-      <div class="container subscribe-container">
-        <h2 class="section-title" id="subscribe-headline">Get ₱200 Off Your First Repair</h2>
-        <p class="section-subtitle" id="subscribe-subheadline">Subscribe for exclusive device care guides, maintenance tips, and VIP promotional discounts.</p>
-        <form class="subscribe-form" id="subscribe-form">
-          <input type="email" class="form-control" id="subscribe-input" placeholder="Enter your email address" required>
-          <button type="submit" class="btn btn-secondary" id="subscribe-btn">Claim Discount</button>
-        </form>
+      <!-- LAYER 6: FIZZY LAGOON OCEAN FLOOR WAVE -->
+      <div class="layer-ocean-floor">
+        <svg class="ocean-wave-pattern" viewBox="0 0 1200 30" preserveAspectRatio="none">
+          <path d="M0 30 Q30 0 60 30 T120 30 T180 30 T240 30 T300 30 T360 30 T420 30 T480 30 T540 30 T600 30 T660 30 T720 30 T780 30 T840 30 T900 30 T960 30 T1020 30 T1080 30 T1140 30 T1200 30 V30 H0 Z" fill="#00A8E8" stroke="#1A142D" stroke-width="4"/>
+        </svg>
       </div>
-    </section>
 
-    <!-- Contact & Business Hours Section -->
-    <section class="section contact-section" id="contact" data-section="contact" data-content-key="contact">
-      <div class="container">
-        <div class="section-header">
-          <h2 class="section-title">Visit Us or Get In Touch</h2>
-          <p class="section-subtitle">Walk-ins welcome during open hours or call us for instant assistance.</p>
-        </div>
-        <div class="contact-grid">
-          <div class="contact-card">
-            <h3>Contact Information</h3>
-            <div class="contact-item">
-              <div class="contact-label">Phone</div>
-              <a href="tel:+63299998888" class="contact-value" id="contact-phone">+63 2 9999 8888</a>
-            </div>
-            <div class="contact-item">
-              <div class="contact-label">Email</div>
-              <a href="mailto:repairs@cebutechmasters.ph" class="contact-value" id="contact-email">repairs@cebutechmasters.ph</a>
-            </div>
-            <div class="contact-item">
-              <div class="contact-label">Address</div>
-              <div class="contact-value" id="contact-address">452 Taft Avenue, Ermita, Cebu</div>
-            </div>
-          </div>
-
-          <div class="hours-card" data-section="hours" data-content-key="contact.hours">
-            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px;">
-              <h3 style="margin-bottom: 0;">Operating Hours</h3>
-              <span class="open-status-badge" id="open-status-badge">
-                <span class="status-dot pulse-beacon"></span>
-                <span id="status-text">Checking Hours...</span>
-              </span>
-            </div>
-            <div id="hours-list">
-              <div class="hours-item">Monday - Friday: 9:00 AM - 7:00 PM</div>
-              <div class="hours-item">Saturday: 8:00 AM - 6:00 PM</div>
-              <div class="hours-item">Sunday: Closed</div>
-            </div>
-            <div style="margin-top: 20px; padding-top: 16px; border-top: 1px solid var(--border-color);">
-              <a href="https://maps.google.com/?q=452+Taft+Avenue+Ermita+Cebu" target="_blank" rel="noopener noreferrer" class="btn btn-outline btn-block hover-bounce" id="directions-btn">
-                <svg class="icon icon-sm" viewBox="0 0 24 24"><polygon points="3 11 22 2 13 21 11 13 3 11"></polygon></svg>
-                <span>Get Driving Directions</span>
-              </a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-  </main>
-
-  <!-- Modal Booking Dialog (Hybrid: Native Lead Capture + Lazy External Scheduler Facade) -->
-  <div class="modal-overlay" id="quote-modal" role="dialog" aria-modal="true" aria-labelledby="modal-heading">
-    <div class="modal-box">
-      <div class="modal-header">
-        <h3 class="modal-title" id="modal-heading">Book Fast Repair Service</h3>
-        <button class="modal-close" id="modal-close-btn" aria-label="Close dialog">&times;</button>
-      </div>
-      <div class="modal-body">
-        <!-- Optional External Scheduler Facade (e.g. Calendly/Acuity iframe loaded on demand) -->
-        <div id="modal-external-embed" class="modal-external-embed" style="display: none;"></div>
-
-        <!-- Native High-Speed Form (Default: Zero external JS, <200ms submission) -->
-        <form id="modal-quote-form">
-          <div class="form-row">
-            <div class="form-group">
-              <label class="form-label" for="modal-device">Device / Service</label>
-              <select class="form-control" id="modal-device" required>
-                <option value="iPhone">iPhone</option>
-                <option value="Android">Samsung / Android</option>
-                <option value="MacBook">MacBook</option>
-                <option value="Laptop">Windows Laptop</option>
-                <option value="iPad">iPad / Tablet</option>
-              </select>
-            </div>
-            <div class="form-group">
-              <label class="form-label" for="modal-service">Repair Needed</label>
-              <select class="form-control" id="modal-service" required>
-                <option value="Screen">Screen Replacement</option>
-                <option value="Battery">Battery Replacement</option>
-                <option value="Water Damage">Water Damage</option>
-                <option value="Data Recovery">Data Recovery</option>
-                <option value="Diagnostics">General Diagnostic</option>
-              </select>
-            </div>
-          </div>
-          <div class="form-group">
-            <label class="form-label" for="modal-name">Your Name</label>
-            <input type="text" class="form-control" id="modal-name" placeholder="Full Name" required autocomplete="name">
-          </div>
-          <div class="form-group">
-            <label class="form-label" for="modal-phone">Phone / WhatsApp</label>
-            <input type="tel" class="form-control" id="modal-phone" placeholder="+63 917 000 0000" required autocomplete="tel">
-          </div>
-          <button type="submit" class="btn btn-primary btn-block">Confirm Appointment Request</button>
-          <div class="form-feedback"></div>
-        </form>
-      </div>
     </div>
   </div>
 
-  <!-- @component:footer -->
-<!-- Site Footer -->
-  <footer class="site-footer" id="site-footer" data-section="footer" data-content-key="footer">
-    <div class="container">
-      <p id="footer-copyright">© 2026 Cebu Tech Masters. All rights reserved.</p>
-      <p id="footer-notice">Certified hardware diagnostics and quick-turnaround repair center.</p>
-    </div>
-  </footer>
-
-  <!-- Milestone 2: Mobile Sticky Action Bar (<768px screens) -->
-  <nav class="mobile-action-bar" id="mobile-action-bar" aria-label="Mobile Quick Actions">
-    <a href="tel:+63299998888" class="mobile-action-item" id="mobile-call-btn">
-      <svg class="icon icon-sm" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
-      <span>Call</span>
-    </a>
-    <a href="https://wa.me/639170000000" target="_blank" rel="noopener noreferrer" class="mobile-action-item" id="mobile-chat-btn">
-      <svg class="icon icon-sm" viewBox="0 0 24 24"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path></svg>
-      <span>WhatsApp</span>
-    </a>
-    <a href="https://maps.google.com/?q=452+Taft+Avenue+Ermita+Cebu" target="_blank" rel="noopener noreferrer" class="mobile-action-item" id="mobile-map-btn">
-      <svg class="icon icon-sm" viewBox="0 0 24 24"><polygon points="3 11 22 2 13 21 11 13 3 11"></polygon></svg>
-      <span>Map</span>
-    </a>
-    <a href="#quote-modal" class="mobile-action-item primary-action" id="mobile-book-btn" data-open-modal="quote-modal">
-      <svg class="icon icon-sm" viewBox="0 0 24 24"><rect width="18" height="18" x="3" y="4" rx="2" ry="2"></rect><line x1="16" x2="16" y1="2" y2="6"></line><line x1="8" x2="8" y1="2" y2="6"></line><line x1="3" x2="21" y1="10" y2="10"></line></svg>
-      <span>Book Repair</span>
-    </a>
-  </nav>
-<!-- /@component:footer -->
-
-  <script src="app.js"></script>
+  <script src="app.js" defer></script>
 </body>
 </html>
